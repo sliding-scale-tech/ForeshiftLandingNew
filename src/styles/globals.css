@@ -1,1 +1,24 @@
 /* React-port global additions. Use :root tokens from site.css. Keep minimal. */
+
+/*
+ * Accessibility: WCAG AA text-contrast fixes (Lighthouse/axe color-contrast).
+ * Same minimal-darkening approach approved for the sibling ForeShift port —
+ * barely perceptible, resting state only (hover/current states already pass).
+ *  - white-on-button text: --shift-light (#027ffc) on white measures 3.86:1;
+ *    a scoped override (not the shared --shift-light token, which is also
+ *    used as *text* color elsewhere at passing ratios) brings the CTA
+ *    buttons to 4.79:1.
+ *  - nav-link resting text: #718096 on the navbar's #f8faff background
+ *    measures 3.84:1; darkened to 4.84:1.
+ */
+:root {
+  --shift-light-accessible: #0270df;
+  --nav-link-accessible: #636f86;
+}
+.get-started,
+.rt-main-button-2 {
+  background-color: var(--shift-light-accessible);
+}
+.nav-link {
+  color: var(--nav-link-accessible);
+}

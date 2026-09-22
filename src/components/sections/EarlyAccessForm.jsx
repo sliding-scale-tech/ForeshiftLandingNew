@@ -27,9 +27,9 @@ export default function EarlyAccessForm() {
         <div className="f-margin-bottom-68">
           <div className="f-title-wrapper-center-2">
             <div className="f-margin-bottom-67">
-              <h1 className="f-h3-heading-3">
+              <h2 className="f-h3-heading-3">
                 Get Ahead of Next<span className="text-span-11"> Week</span>
-              </h1>
+              </h2>
             </div>
             <p className="f-paragraph-large-3">
               ForeShift is live in Detroit and opening more markets next. Tell us where you operate and we'll get

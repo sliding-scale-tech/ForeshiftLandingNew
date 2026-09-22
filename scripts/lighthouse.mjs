@@ -1,0 +1,106 @@
+// Lighthouse runner for the single route `/`: performance, accessibility, best-practices, seo.
+// Usage:
+//   node scripts/lighthouse.mjs [--base=http://localhost:4173] [--original]
+//                                [--presets=mobile,desktop] [--runs=3] [--label=build]
+//   --original  test the Webflow export (ORIGINAL_BASE, index.html) instead of the React build
+// Mobile = Lighthouse default (Moto G Power emulation, simulated slow-4G throttling, 4x CPU).
+// Desktop = Lighthouse's desktop-config preset.
+// Writes lighthouse/<label>/<preset>-<run>.json and lighthouse/<label>/summary.json
+import lighthouse from 'lighthouse'
+import desktopConfig from 'lighthouse/core/config/desktop-config.js'
+import * as chromeLauncher from 'chrome-launcher'
+import fs from 'node:fs'
+import path from 'node:path'
+
+const args = process.argv.slice(2)
+const opt = (name, def) => {
+  const a = args.find((x) => x.startsWith(`--${name}=`))
+  return a ? a.slice(name.length + 3) : def
+}
+const original = args.includes('--original')
+const base = opt('base', original ? 'http://localhost:5500' : 'http://localhost:4173')
+const runs = Number(opt('runs', 3))
+const presets = opt('presets', 'mobile,desktop').split(',')
+const label = opt('label', original ? 'original' : 'build')
+const url = original ? `${base}/index.html` : `${base}/`
+const outDir = path.join('lighthouse', label)
+fs.mkdirSync(outDir, { recursive: true })
+
+const CHROME = process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+const mobileConfig = { extends: 'lighthouse:default', settings: { onlyCategories: ['performance', 'accessibility', 'best-practices', 'seo'] } }
+const deskConfig = { ...desktopConfig, settings: { ...desktopConfig.settings, onlyCategories: ['performance', 'accessibility', 'best-practices', 'seo'] } }
+
+const median = (xs) => {
+  const s = [...xs].sort((a, b) => a - b)
+  return s[Math.floor(s.length / 2)]
+}
+const fmt = (ms) => (ms >= 1000 ? `${(ms / 1000).toFixed(2)}s` : `${Math.round(ms)}ms`)
+
+const summary = []
+for (const preset of presets) {
+  const results = []
+  for (let i = 1; i <= runs; i++) {
+    // Fresh Chrome (and profile) per run so nothing is cached between runs.
+    const chrome = await chromeLauncher.launch({
+      chromePath: CHROME,
+      chromeFlags: ['--headless=new', '--no-first-run', '--disable-extensions'],
+    })
+    try {
+      const res = await lighthouse(
+        url,
+        { port: chrome.port, output: 'json', logLevel: 'error' },
+        preset === 'desktop' ? deskConfig : mobileConfig,
+      )
+      const lhr = res.lhr
+      fs.writeFileSync(path.join(outDir, `${preset}-${i}.json`), res.report)
+      const a = lhr.audits
+      const r = {
+        score: Math.round((lhr.categories.performance.score ?? 0) * 100),
+        lcp: a['largest-contentful-paint'].numericValue,
+        fcp: a['first-contentful-paint'].numericValue,
+        tbt: a['total-blocking-time'].numericValue,
+        cls: a['cumulative-layout-shift'].numericValue,
+        si: a['speed-index'].numericValue,
+        bp: Math.round((lhr.categories['best-practices'].score ?? 0) * 100),
+        seo: Math.round((lhr.categories.seo.score ?? 0) * 100),
+        otherFailures: ['best-practices', 'seo'].flatMap((c) => lhr.categories[c].auditRefs
+          .filter((ref) => ref.weight > 0 && a[ref.id].score !== null && a[ref.id].score < 1).map((ref) => `${c}:${ref.id}`)),
+        a11y: Math.round((lhr.categories.accessibility.score ?? 0) * 100),
+        a11yFailures: lhr.categories.accessibility.auditRefs
+          .filter((ref) => ref.weight > 0 && a[ref.id].score !== null && a[ref.id].score < 1)
+          .map((ref) => `${ref.id}(${(a[ref.id].details?.items || []).map((it) => it.node?.selector).filter(Boolean).join(' | ')})`),
+      }
+      if (lhr.runtimeError) r.error = lhr.runtimeError.message
+      results.push(r)
+      console.log(
+        `${preset.padEnd(7)} run${i}  perf ${String(r.score).padStart(3)}  ` +
+          `LCP ${fmt(r.lcp).padEnd(7)} FCP ${fmt(r.fcp).padEnd(7)} TBT ${fmt(r.tbt).padEnd(6)} ` +
+          `CLS ${r.cls.toFixed(3)}  SI ${fmt(r.si)}  a11y ${r.a11y} bp ${r.bp} seo ${r.seo}${r.error ? '  ERROR ' + r.error : ''}` +
+          (r.a11yFailures.length ? `\n    a11y failures: ${r.a11yFailures.join('\n                   ')}` : '') +
+          (r.otherFailures.length ? `\n    other failures: ${r.otherFailures.join(', ')}` : ''),
+      )
+    } finally {
+      await chrome.kill()
+    }
+  }
+  const m = (k) => median(results.map((r) => r[k]))
+  const row = {
+    preset, url,
+    median: m('score'), min: Math.min(...results.map((r) => r.score)),
+    bpMedian: m('bp'), bpMin: Math.min(...results.map((r) => r.bp)),
+    seoMedian: m('seo'), seoMin: Math.min(...results.map((r) => r.seo)),
+    a11yMedian: m('a11y'), a11yMin: Math.min(...results.map((r) => r.a11y)),
+    lcp: m('lcp'), fcp: m('fcp'), tbt: m('tbt'), cls: m('cls'), si: m('si'),
+    runs: results,
+  }
+  summary.push(row)
+  console.log(
+    `${preset.padEnd(7)} MEDIAN perf ${String(row.median).padStart(3)} (min ${row.min})  ` +
+      `LCP ${fmt(row.lcp)} FCP ${fmt(row.fcp)} TBT ${fmt(row.tbt)} CLS ${row.cls.toFixed(3)} SI ${fmt(row.si)}  a11y ${row.a11yMedian} (min ${row.a11yMin})`,
+  )
+}
+fs.writeFileSync(path.join(outDir, 'summary.json'), JSON.stringify(summary, null, 2))
+console.log('\nSUMMARY')
+for (const r of summary) {
+  console.log(`${r.preset.padEnd(7)} median ${r.median} min ${r.min}  LCP ${fmt(r.lcp)} FCP ${fmt(r.fcp)} TBT ${fmt(r.tbt)} CLS ${r.cls.toFixed(3)} SI ${fmt(r.si)} | a11y ${r.a11yMedian}/${r.a11yMin} bp ${r.bpMedian}/${r.bpMin} seo ${r.seoMedian}/${r.seoMin} (median/min)`)
+}

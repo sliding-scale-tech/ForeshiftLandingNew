@@ -16,13 +16,21 @@ export default function App() {
       <Interactions />
       <Navbar />
       <section className="smooth-scroll">
-        <Hero />
-        <Challenge />
-        <TestimonialSlider />
-        <Features />
-        <Integrations />
-        <HowItWorks />
-        <EarlyAccessForm />
+        {/* a11y: page content sits in a <main> landmark (axe `landmark-one-main`). `main` is
+            `display:block` in normalize.css with no other rules, and Footer stays a sibling
+            outside it (not nested in main) so it keeps its own `contentinfo` landmark — same
+            layout as before, zero pixel change, no effect on `.smooth-scroll`'s own CSS (which
+            targets that class, not element depth) or Lenis (which drives scroll off the
+            document, not this wrapper). */}
+        <main>
+          <Hero />
+          <Challenge />
+          <TestimonialSlider />
+          <Features />
+          <Integrations />
+          <HowItWorks />
+          <EarlyAccessForm />
+        </main>
         <Footer />
       </section>
     </>

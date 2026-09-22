@@ -19,7 +19,7 @@ export default function Navbar() {
         className="navbar w-nav"
       >
         <div className="navbar-container">
-          <a href="#Hero-Section" aria-current="page" className="brand w-nav-brand w--current">
+          <a href="#Hero-Section" aria-current="page" aria-label="ForeShift home" className="brand w-nav-brand w--current">
             <img
               sizes="(max-width: 479px) 98vw, (max-width: 1343px) 100vw, 1343px"
               srcSet={LOGO.srcSet}

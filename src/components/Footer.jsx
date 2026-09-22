@@ -5,7 +5,7 @@ export default function Footer() {
     <section className="footer">
       <div className="footer-wrapper">
         <div className="footer-columns">
-          <a href="#Hero-Section" aria-current="page" className="w-inline-block w--current">
+          <a href="#Hero-Section" aria-current="page" aria-label="ForeShift home" className="w-inline-block w--current">
             <img
               sizes="(max-width: 1343px) 100vw, 1343px"
               srcSet={LOGO.srcSet}
@@ -17,7 +17,7 @@ export default function Footer() {
           </a>
         </div>
         <div className="foot-column-links">
-          <h4 className="foot-header">Quick Links</h4>
+          <h3 className="foot-header">Quick Links</h3>
           <div className="foot-link-wrapper">
             {FOOTER_LINKS.map((l) => (
               <a key={l.label} href={`#${l.id}`} className="foot-link">
