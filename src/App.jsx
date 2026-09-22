@@ -7,7 +7,7 @@ import TestimonialSlider from './components/sections/TestimonialSlider'
 import Features from './components/sections/Features'
 import Integrations from './components/sections/Integrations'
 import HowItWorks from './components/sections/HowItWorks'
-import EarlyAccessForm from './components/sections/EarlyAccessForm'
+import CallToAction from './components/sections/CallToAction'
 
 // Single-page site — mirrors the Webflow export's one `index.html`.
 export default function App() {
@@ -29,7 +29,7 @@ export default function App() {
           <Features />
           <Integrations />
           <HowItWorks />
-          <EarlyAccessForm />
+          <CallToAction />
         </main>
         <Footer />
       </section>

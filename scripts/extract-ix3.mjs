@@ -102,7 +102,13 @@ function normAction(a) {
 }
 
 const tlById = new Map(timelines.map((t) => [t.id, t]))
-const pageInteractions = interactions.filter((it) => it.scope.type === 'pages' && it.scope.value.includes(PAGE))
+// Page-scoped interactions apply only to this page. Component-scoped ones (Webflow Symbols) apply
+// wherever the component is placed — we can't tell from ix-data.js alone which pages use which
+// component, so include them all; their wf:class-targeted actions simply resolve to nothing at
+// runtime on pages that don't render the component (see resolveTargets.js), so this is safe.
+const pageInteractions = interactions.filter(
+  (it) => (it.scope.type === 'pages' && it.scope.value.includes(PAGE)) || it.scope.type === 'component',
+)
 
 const out = pageInteractions.map((it) => {
   const tl = tlById.get(it.timelineIds[0])
