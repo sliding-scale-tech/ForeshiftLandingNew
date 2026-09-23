@@ -14,12 +14,14 @@ export const SECTIONS = [
   { label: 'Challenges', id: 'Challenge-Section' },
   { label: 'Features', id: 'Features-Section' },
   { label: 'How it Works', id: 'How-it-Works-Section' },
+  { label: 'Pricing', id: 'Pricing-Section' }, // added with the Pricing section — no Webflow id, this one's ours
 ]
 
 export const FOOTER_LINKS = [
   { label: 'Challenges', id: 'Challenge-Section' }, // fixed: source href says "Challenges-Section" (no such id exists — a typo present on the live Webflow site too), the real section id is "Challenge-Section"
   { label: 'Features', id: 'Features-Section' },
   { label: 'How it Works', id: 'How-it-Works-Section' },
+  { label: 'Pricing', id: 'Pricing-Section' },
 ]
 
 // Added for Stripe's website checklist (docs.stripe.com/get-started/checklist/website) —

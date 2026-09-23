@@ -80,3 +80,102 @@
     padding: 48px 20px;
   }
 }
+
+/*
+ * Pricing section (src/components/sections/Pricing.jsx) — added at Umar's request; not present in
+ * the Webflow export/live site. Section chrome (.chatbot-heading, .spark-hero-sub-paragraph-2)
+ * reuses existing site classes; the cards below are new, built from this project's own :root
+ * tokens (--color-background-section, --border-radius-large, --color-primary, --color-border).
+ */
+.pricing-wrapper {
+  width: 100%;
+  background-color: var(--color-background-section);
+  padding: var(--spacing-section) 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pricing-header {
+  max-width: 900px;
+  text-align: center;
+  margin-bottom: var(--spacing-large);
+}
+.pricing-grid {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-medium);
+}
+.pricing-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-large);
+  padding: var(--spacing-large) var(--spacing-medium);
+  display: flex;
+  flex-direction: column;
+}
+.pricing-card-name {
+  color: var(--heading-color);
+  font-family: var(--font-primary);
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+.pricing-card-tagline {
+  /* --color-primary (#0084ff) on white is 3.66:1, below WCAG AA at this font size — reuse the
+     accessible blue already established for the CTA buttons (4.79:1) rather than a new token. */
+  color: var(--shift-light-accessible);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  margin: 0 0 var(--spacing-medium);
+}
+.pricing-card-price {
+  margin: 0 0 var(--spacing-large);
+}
+.pricing-card-price-amount {
+  color: var(--heading-color);
+  font-family: var(--font-primary);
+  font-size: 40px;
+  font-weight: 700;
+}
+.pricing-card-price-period {
+  color: var(--text-color);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body);
+}
+.pricing-card-features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+.pricing-card-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--text-color);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-small);
+  line-height: 1.5;
+}
+.pricing-check-icon {
+  flex: none;
+  color: var(--color-primary);
+  margin-top: 2px;
+}
+
+@media screen and (max-width: 991px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .pricing-wrapper {
+    padding: 48px 20px;
+  }
+}
