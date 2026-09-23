@@ -22,3 +22,61 @@
 .nav-link {
   color: var(--nav-link-accessible);
 }
+
+/*
+ * Legal pages (Terms, Privacy, Refunds, Eligibility) — see src/components/LegalPage.jsx for why
+ * these exist. The hero reuses the Challenge-Section's own classes verbatim (spark-section-7,
+ * spark-container-5, chatbot-heading, spark-hold-circles-2) for visual consistency with the rest
+ * of the site; only the body typography below is new, built from this site's own :root tokens
+ * (--heading-color, --text-color, --font-primary, --color-primary, --spacing-section) rather than
+ * introducing a second type system.
+ */
+.legal-hero .chatbot-heading {
+  margin-bottom: 0;
+}
+.legal-hero:has(.spark-hero-sub-paragraph-2) .chatbot-heading {
+  margin-bottom: 10px;
+}
+
+.legal-body {
+  width: 100%;
+  padding: var(--spacing-section, 80px) 64px;
+}
+.legal-body-container {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: var(--font-primary);
+  color: var(--text-color);
+  font-size: var(--font-size-body, 16px);
+  line-height: 1.6;
+}
+.legal-body-container h2 {
+  color: var(--heading-color);
+  font-size: var(--font-size-h4, 20px);
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 48px 0 12px;
+}
+.legal-body-container h2:first-child {
+  margin-top: 0;
+}
+.legal-body-container p {
+  margin: 0 0 4px;
+}
+.legal-body-container a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+.legal-body-container a:hover {
+  color: var(--nav-link-accessible);
+}
+.legal-body-container strong {
+  color: var(--heading-color);
+  font-weight: 600;
+}
+
+@media screen and (max-width: 479px) {
+  .legal-body {
+    padding: 48px 20px;
+  }
+}

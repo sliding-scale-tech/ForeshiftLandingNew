@@ -1,4 +1,5 @@
 import { useLayoutEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { initIx3Timelines } from './lib/buildIx3Timelines'
 import { initChallengeParallax } from './lib/challengeParallax'
 import { initLenis } from './lib/lenisSetup'
@@ -15,7 +16,18 @@ import { initNavScrollSpy } from './lib/navScrollSpy'
 // visibility:hidden guard, before the browser paints a frame — matching
 // Webflow's own w-mod-ix3 no-flash mechanism. Every setup function returns
 // its own teardown so this is safe under React StrictMode's dev double-invoke.
+//
+// Re-runs on every route change (`pathname` dependency): this component sits
+// outside <Routes> in App.jsx and is never unmounted, but the <Route>
+// elements it targets (Home's sections, the legal-page hero circles) ARE
+// unmounted/remounted on navigation — a stale one-time init would leave a
+// freshly-mounted Home with no animations after navigating away and back.
+// Only Lenis and the mobile nav (both keyed to permanent DOM: <html>,
+// Navbar) don't need this, but re-running them is harmless (each tears down
+// its own previous instance first).
 export default function Interactions() {
+  const { pathname } = useLocation()
+
   useLayoutEffect(() => {
     const html = document.documentElement
     const teardowns = []
@@ -45,7 +57,7 @@ export default function Interactions() {
       html.classList.remove('ix3-ready')
       for (const teardown of teardowns) teardown?.()
     }
-  }, [])
+  }, [pathname])
 
   return null
 }

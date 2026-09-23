@@ -1,6 +1,14 @@
 // Single source of truth for shared content (nav, footer, links, assets).
 // Components read from here — never hardcode these values elsewhere.
 
+export const ROUTES = {
+  home: '/',
+  terms: '/terms-and-conditions',
+  privacy: '/privacy-policy',
+  refunds: '/refunds-cancellation',
+  eligibility: '/eligibility-restrictions',
+}
+
 export const SECTIONS = [
   { label: 'Home', id: 'Hero-Section' },
   { label: 'Challenges', id: 'Challenge-Section' },
@@ -12,6 +20,23 @@ export const FOOTER_LINKS = [
   { label: 'Challenges', id: 'Challenge-Section' }, // fixed: source href says "Challenges-Section" (no such id exists — a typo present on the live Webflow site too), the real section id is "Challenge-Section"
   { label: 'Features', id: 'Features-Section' },
   { label: 'How it Works', id: 'How-it-Works-Section' },
+]
+
+// Added for Stripe's website checklist (docs.stripe.com/get-started/checklist/website) —
+// customer-service contact info and links to the fulfillment/privacy policies it requires. These
+// pages don't exist in the Webflow export/live site at all; content is adapted from the sibling
+// ForeShift port's own legal pages (same real business), restyled to this site's design system.
+export const LEGAL_LINKS = [
+  { label: 'Terms & Conditions', to: ROUTES.terms },
+  { label: 'Privacy Policy', to: ROUTES.privacy },
+  { label: 'Refunds & Cancellations', to: ROUTES.refunds },
+  { label: 'Eligibility & Restrictions', to: ROUTES.eligibility },
+]
+
+export const CONTACT_LINKS = [
+  { label: '(888)2345-6789', href: 'tel:+18882345689' }, // placeholder digits, same as the sibling port — this is template contact info, not a real ForeShift number
+  { label: 'support@foreshift.ai', href: 'mailto:support@foreshift.ai' },
+  { label: 'hello@foreshift.ai', href: 'mailto:hello@foreshift.ai' },
 ]
 
 // The product app lives on its own subdomain. Every CTA on this page ("Get Started", "Sign Up",

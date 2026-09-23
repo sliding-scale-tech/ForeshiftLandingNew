@@ -1,18 +1,24 @@
+import { lazy, Suspense } from 'react'
+import { Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import ScrollManager from './components/ScrollManager'
 import Interactions from './animations/Interactions'
-import Hero from './components/sections/Hero'
-import Challenge from './components/sections/Challenge'
-import TestimonialSlider from './components/sections/TestimonialSlider'
-import Features from './components/sections/Features'
-import Integrations from './components/sections/Integrations'
-import HowItWorks from './components/sections/HowItWorks'
-import CallToAction from './components/sections/CallToAction'
+import { ROUTES } from './config/site'
+import Home from './pages/Home'
 
-// Single-page site — mirrors the Webflow export's one `index.html`.
+// Code-split: legal pages are lazy so their JS (react-router route code + content) doesn't add to
+// Home's initial bundle — most visitors never load these, and Home is the page Lighthouse/LCP
+// performance was tuned against.
+const Terms = lazy(() => import('./pages/Terms'))
+const Privacy = lazy(() => import('./pages/Privacy'))
+const Refunds = lazy(() => import('./pages/Refunds'))
+const Eligibility = lazy(() => import('./pages/Eligibility'))
+
 export default function App() {
   return (
     <>
+      <ScrollManager />
       <Interactions />
       <Navbar />
       <section className="smooth-scroll">
@@ -23,13 +29,15 @@ export default function App() {
             targets that class, not element depth) or Lenis (which drives scroll off the
             document, not this wrapper). */}
         <main>
-          <Hero />
-          <Challenge />
-          <TestimonialSlider />
-          <Features />
-          <Integrations />
-          <HowItWorks />
-          <CallToAction />
+          <Suspense fallback={null}>
+            <Routes>
+              <Route path={ROUTES.home} element={<Home />} />
+              <Route path={ROUTES.terms} element={<Terms />} />
+              <Route path={ROUTES.privacy} element={<Privacy />} />
+              <Route path={ROUTES.refunds} element={<Refunds />} />
+              <Route path={ROUTES.eligibility} element={<Eligibility />} />
+            </Routes>
+          </Suspense>
         </main>
         <Footer />
       </section>

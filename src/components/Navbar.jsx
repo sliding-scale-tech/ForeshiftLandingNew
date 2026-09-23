@@ -1,9 +1,13 @@
-import { EXTERNAL, LOGO, SECTIONS } from '../config/site'
+import { Link } from 'react-router-dom'
+import { EXTERNAL, LOGO, ROUTES, SECTIONS } from '../config/site'
 
 /**
- * Webflow `w-nav` navbar (single-page site: all links are in-page anchors).
- * Markup mirrors the export 1:1 so the global stylesheet applies unchanged.
- * Mobile menu behaviour lives in src/animations (owned by the interactions layer).
+ * Webflow `w-nav` navbar. Markup mirrors the export 1:1 so the global stylesheet applies
+ * unchanged. Mobile menu behaviour lives in src/animations (owned by the interactions layer).
+ *
+ * SECTIONS are in-page anchors on Home — from any other route (a legal page) they need to
+ * navigate back to "/" first, so every link goes through react-router's <Link> to "/#id"; on
+ * Home itself this is the same client-side transition, just with an unchanged pathname.
  */
 export default function Navbar() {
   return (
@@ -19,7 +23,7 @@ export default function Navbar() {
         className="navbar w-nav"
       >
         <div className="navbar-container">
-          <a href="#Hero-Section" aria-current="page" aria-label="ForeShift home" className="brand w-nav-brand w--current">
+          <Link to={ROUTES.home} aria-label="ForeShift home" className="brand w-nav-brand">
             <img
               sizes="(max-width: 479px) 98vw, (max-width: 1343px) 100vw, 1343px"
               srcSet={LOGO.srcSet}
@@ -28,12 +32,12 @@ export default function Navbar() {
               loading="lazy"
               className="image"
             />
-          </a>
+          </Link>
           <nav role="navigation" className="nav-menu w-nav-menu">
             {SECTIONS.map((s) => (
-              <a key={s.id} href={`#${s.id}`} className="nav-link w-nav-link">
+              <Link key={s.id} to={`${ROUTES.home}#${s.id}`} className="nav-link w-nav-link">
                 {s.label}
-              </a>
+              </Link>
             ))}
             <a href={EXTERNAL.signUp} target="_blank" rel="noopener" className="rt-main-button-2 w-button">
               Sign Up
