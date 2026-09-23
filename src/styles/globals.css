@@ -141,7 +141,9 @@
   font-weight: 700;
 }
 .pricing-card-price-period {
-  color: var(--text-color);
+  /* --text-color (#718096) on white is 4.02:1 at this size, below WCAG AA — same accessible gray
+     already established for the nav links (5.06:1). */
+  color: var(--nav-link-accessible);
   font-family: var(--font-primary);
   font-size: var(--font-size-body);
 }
@@ -157,7 +159,7 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  color: var(--text-color);
+  color: var(--nav-link-accessible);
   font-family: var(--font-primary);
   font-size: var(--font-size-small);
   line-height: 1.5;
