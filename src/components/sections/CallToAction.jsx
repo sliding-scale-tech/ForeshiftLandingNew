@@ -5,6 +5,8 @@
 // Its reveal animation is a Webflow COMPONENT-scoped IX3 interaction (id 77fe5cb1-d7b1-9585-f861-
 // a1158ff54eb8) rather than a page-scoped one; data-w-id below is that component-instance id,
 // used only to resolve the scroll-trigger's watch element (see scripts/extract-ix3.mjs).
+import { EXTERNAL } from '../../config/site'
+
 export default function CallToAction() {
   return (
     <section className="call-to-action-wrapper" data-w-id="77fe5cb1-d7b1-9585-f861-a1158ff54eb8">
@@ -17,7 +19,7 @@ export default function CallToAction() {
           service.
         </p>
         <section className="cta-button-container">
-          <a href="#" className="cta-button w-button">
+          <a href={EXTERNAL.signUp} target="_blank" rel="noopener" className="cta-button w-button">
             Try Yourself
           </a>
         </section>

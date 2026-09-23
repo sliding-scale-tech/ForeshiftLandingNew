@@ -1,4 +1,4 @@
-import { LOGO, SECTIONS } from '../config/site'
+import { EXTERNAL, LOGO, SECTIONS } from '../config/site'
 
 /**
  * Webflow `w-nav` navbar (single-page site: all links are in-page anchors).
@@ -35,7 +35,7 @@ export default function Navbar() {
                 {s.label}
               </a>
             ))}
-            <a href="#" className="rt-main-button-2 w-button">
+            <a href={EXTERNAL.signUp} target="_blank" rel="noopener" className="rt-main-button-2 w-button">
               Sign Up
             </a>
           </nav>

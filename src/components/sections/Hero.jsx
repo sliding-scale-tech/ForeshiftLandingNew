@@ -1,3 +1,5 @@
+import { EXTERNAL } from '../../config/site'
+
 export default function Hero() {
   return (
     <section id="Hero-Section" className="hero-wrapper">
@@ -8,8 +10,8 @@ export default function Hero() {
         <p className="hero-subtitle">ForeShift helps restaurants see what demand is coming before the shift begins.</p>
       </div>
       <div className="hero-button-wrapper">
-        <a href="#" className="get-started w-button">Get Started</a>
-        <a href="#" className="contact-us w-button">Try Now</a>
+        <a href={EXTERNAL.signUp} target="_blank" rel="noopener" className="get-started w-button">Get Started</a>
+        <a href={EXTERNAL.signUp} target="_blank" rel="noopener" className="contact-us w-button">Try Now</a>
       </div>
       <img
         src="/images/ChatGPT-Image-Sep-15-2026-06_09_36-PM.avif"

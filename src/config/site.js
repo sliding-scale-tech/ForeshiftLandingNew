@@ -14,6 +14,15 @@ export const FOOTER_LINKS = [
   { label: 'How it Works', id: 'How-it-Works-Section' },
 ]
 
+// The product app lives on its own subdomain. Every CTA on this page ("Get Started", "Sign Up",
+// "Try Now", "Explore in Action", "Try Yourself") sends a new visitor there — none of them are a
+// "log in" link, so EXTERNAL.signUp is what they all use; EXTERNAL.signIn is kept for the day a
+// returning-user link is added.
+export const EXTERNAL = {
+  signUp: 'https://app.foreshift.ai/sign-up',
+  signIn: 'https://app.foreshift.ai/sign-in',
+}
+
 export const LOGO = {
   src: '/images/Foreshift_logo-dark1.avif',
   srcSet:

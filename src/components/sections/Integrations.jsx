@@ -1,3 +1,5 @@
+import { EXTERNAL } from '../../config/site'
+
 const rowA = [
   { plain: 'Trade ', emph: 'Smart' },
   { plain: 'Staff ', emph: 'better' },
@@ -86,7 +88,7 @@ export default function Integrations() {
         data-wf-target='[[["6aa935b3aacd1b5b9fc5d716","ae8b4b08-4f8f-a62e-6dbe-7b3b8df5e9a8"],[]]]'
         className="btn-container"
       >
-        <a href="#" className="get-started w-button">
+        <a href={EXTERNAL.signUp} target="_blank" rel="noopener" className="get-started w-button">
           Explore in Action
         </a>
       </section>
