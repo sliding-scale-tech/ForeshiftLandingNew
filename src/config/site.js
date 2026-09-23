@@ -9,7 +9,7 @@ export const SECTIONS = [
 ]
 
 export const FOOTER_LINKS = [
-  { label: 'Challenges', id: 'Challenges-Section' }, // export's own footer href (Challenge vs Challenges — kept verbatim)
+  { label: 'Challenges', id: 'Challenge-Section' }, // fixed: source href says "Challenges-Section" (no such id exists — a typo present on the live Webflow site too), the real section id is "Challenge-Section"
   { label: 'Features', id: 'Features-Section' },
   { label: 'How it Works', id: 'How-it-Works-Section' },
 ]

@@ -30,7 +30,7 @@ never linked from the real page. **Do not port them.** The React app is a single
 - Port markup 1:1: same elements, nesting, classes, ids (incl. `w-node-…`), text, `srcset`/`sizes`/`loading`/`width`/`alt`.
 - KEEP `data-w-id` and `data-wf-target` attributes exactly. In JSX, `data-wf-target` is a plain string of the decoded JSON.
 - Image paths: `images/x.avif` → `/images/x.avif` (served from `public/`).
-- Section ids used by nav/footer anchors — keep exactly: `Hero-Section`, `Challenge-Section`, `Features-Section`, `How-it-Works-Section`. Note the footer's own href says `#Challenges-Section` (with an s) which does NOT match `Challenge-Section` in the actual export — this is a bug already present in the source; port it verbatim, don't "fix" it.
+- Section ids used by nav/footer anchors — keep exactly: `Hero-Section`, `Challenge-Section`, `Features-Section`, `How-it-Works-Section`. The footer's own href originally said `#Challenges-Section` (with an s), which doesn't match `Challenge-Section` — a real typo present on the live Webflow site too. Fixed in `src/config/site.js`'s `FOOTER_LINKS` (2026-09-23, at Umar's request) rather than ported verbatim.
 - Shared chrome (`Navbar.jsx`, `Footer.jsx`) is already built by the lead — don't edit it; report issues instead.
 - Repeated blocks (marquee rows, testimonial slide items, feature/step cards) → small components/data arrays as long as output DOM matches exactly.
 - Form: keep Webflow markup/classes; wire submit UX (success/fail toggling like Webflow's `w-form-done`/`w-form-fail`) without jQuery — this form has no backend, so simulate success like a static Webflow form would (no fetch call needed unless the lead says otherwise).
