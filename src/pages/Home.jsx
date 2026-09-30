@@ -1,10 +1,13 @@
 import Hero from '../components/sections/Hero'
 import Challenge from '../components/sections/Challenge'
-import TestimonialSlider from '../components/sections/TestimonialSlider'
+import ProblemExamples from '../components/sections/ProblemExamples'
 import Features from '../components/sections/Features'
 import Integrations from '../components/sections/Integrations'
-import HowItWorks from '../components/sections/HowItWorks'
+import ProductOverview from '../components/sections/ProductOverview'
+import Steps from '../components/sections/Steps'
+import CoverageTeaser from '../components/sections/CoverageTeaser'
 import Pricing from '../components/sections/Pricing'
+import Faq from '../components/sections/Faq'
 import CallToAction from '../components/sections/CallToAction'
 
 export default function Home() {
@@ -12,11 +15,14 @@ export default function Home() {
     <>
       <Hero />
       <Challenge />
-      <TestimonialSlider />
+      <ProblemExamples />
       <Features />
       <Integrations />
-      <HowItWorks />
+      <ProductOverview />
+      <Steps />
+      <CoverageTeaser />
       <Pricing />
+      <Faq />
       <CallToAction />
     </>
   )

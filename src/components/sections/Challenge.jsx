@@ -7,13 +7,13 @@ export default function Challenge() {
     >
       <div className="spark-container-5 spark-centered-content w-container">
         <h2 className="chatbot-heading">
-          Your Busiest Night shouldn’t be a <span className="text-span-4">Surprise.</span>
+          Plan for the <span className="text-span-4">busy</span> shifts.
           <br />
-          Neither should your <span className="text-span-5">Slowest.</span>
+          Prepare for the <span className="text-span-5">quiet</span> ones.
         </h2>
         <p className="spark-hero-sub-paragraph-2">
-          The problem isn’t that restaurants can’t react. <br />
-          It’s that by the time you’re reacting, the expensive decisions have already been made.
+          Staffing and prep decisions happen before service. See the demand signals that can help you make those
+          decisions earlier.
         </p>
       </div>
       <div className="spark-hold-circles-2">

@@ -9,5 +9,4 @@
 @import './webflow.css';
 @import './site.css';
 @import 'lenis/dist/lenis.css'; /* the export links this from unpkg; our build bundles the same package */
-@import './interactions.css';
 @import './globals.css';

@@ -7,12 +7,13 @@ const cards = [
       '[[["6aa935b3aacd1b5b9fc5d716","98746839-578f-50ee-2363-b3447e793966"],[]]]',
     title: (
       <>
-        <span className="text-span-27">Real-world</span> signals shape the forecast.
+        See what is shaping <span className="text-span-27">local demand.</span>
       </>
     ),
     textTarget:
       '[[["6aa935b3aacd1b5b9fc5d716","a17466c3-9942-6550-f519-0664ade9edae"],[]]]',
-    text: 'ForeShift factors in nearby events and changing weather conditions to understand what’s actually influencing demand, so your forecast reflects what’s happening around your restaurant, not just historical averages.',
+    text: 'Explore how nearby events and forecast weather may influence demand for your concept and location.',
+    imageAlt: 'Illustration: weather, events and holidays feeding into tomorrow’s demand outlook',
     btnContainerTarget:
       '[[["6aa935b3aacd1b5b9fc5d716","ee9102ab-06fd-3043-825d-daea219f42dd"],[]]]',
     leftContainerClass: 'w-layout-blockcontainer featured-card-left-container w-container',
@@ -31,12 +32,13 @@ const cards = [
       '[[["6aa935b3aacd1b5b9fc5d716","9200e114-d3c5-1be7-ace2-84bbd457067c"],[]]]',
     title: (
       <>
-        Built around where you <span className="text-span-28">Operate.</span>
+        Built around your <span className="text-span-28">concept and location.</span>
       </>
     ),
     textTarget:
       '[[["6aa935b3aacd1b5b9fc5d716","9200e114-d3c5-1be7-ace2-84bbd457067e"],[]]]',
-    text: 'ForeShift adapts forecasts to your restaurant’s concept and local trade area, so a coffee shop, sports bar, or fine-dining venue isn’t treated the same, even within the same city.',
+    text: 'The outlook reflects your restaurant’s concept and the area around it, so a coffee shop, a sports bar and a fine-dining venue aren’t treated the same, even within the same city.',
+    imageAlt: 'Illustration: a weekly demand outlook built from weather, events and local context',
     btnContainerTarget:
       '[[["6aa935b3aacd1b5b9fc5d716","543884fb-9ccf-8ad8-cfbe-7c30e3ef6ca4"],[]]]',
     leftContainerClass: 'w-layout-blockcontainer featured-card-left-container card2 w-container',
@@ -61,6 +63,7 @@ const cards = [
     textTarget:
       '[[["6aa935b3aacd1b5b9fc5d716","7eeae2a1-3bf1-0a4c-5351-39be08d006ca"],[]]]',
     text: 'ForeShift gives operators a clearer view of the week ahead, helping teams make better decisions around staffing, prep, hours, promotions, and event readiness before the shift arrives.',
+    imageAlt: 'Illustration: a next-shift demand outlook next to the previous day',
     btnContainerTarget: null,
     leftContainerClass: 'w-layout-blockcontainer featured-card-left-container card3 w-container',
     imageTarget:
@@ -79,10 +82,11 @@ function ImageBlock({ card }) {
         loading="lazy"
         data-wf-target={card.imageTarget}
         sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 940px"
-        alt=""
+        alt={card.imageAlt}
         srcSet={card.imageSrcSet}
         className="featured-card-image"
       />
+      <p className="illustration-caption">Illustrative example.</p>
     </div>
   )
 }

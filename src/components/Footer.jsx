@@ -21,7 +21,7 @@ export default function Footer() {
           <h3 className="foot-header">Quick Links</h3>
           <div className="foot-link-wrapper">
             {FOOTER_LINKS.map((l) => (
-              <Link key={l.label} to={`${ROUTES.home}#${l.id}`} className="foot-link">
+              <Link key={l.label} to={l.to} className="foot-link">
                 {l.label}
               </Link>
             ))}

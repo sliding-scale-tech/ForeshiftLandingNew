@@ -1,95 +1,72 @@
-import { EXTERNAL } from '../../config/site'
+import { CTA_LABEL, EXTERNAL } from '../../config/site'
 
-const rowA = [
-  { plain: 'Trade ', emph: 'Smart' },
-  { plain: 'Staff ', emph: 'better' },
-  { plain: 'Prep ', emph: 'Ahead' },
-  { plain: 'WASTE ', emph: 'Less' },
+// Client review: the two moving slogan ribbons ("Trade Smart", "Staff Better", …) are gone and the
+// space now holds a readable product example. The example is deliberately HTML (real text, no
+// baked-in numbers) and carries the "illustrative data" label the review asks for on staged data.
+const WEEK = [
+  { day: 'Mon', level: 2 },
+  { day: 'Tue', level: 2 },
+  { day: 'Wed', level: 3 },
+  { day: 'Thu', level: 3 },
+  { day: 'Fri', level: 5 },
+  { day: 'Sat', level: 4 },
+  { day: 'Sun', level: 3 },
 ]
 
-const rowB = [
-  { span: true, plain: 'Demand', rest: ' Signals' },
-  { plain: 'Weather ', emph: 'Ready' },
-  { plain: 'Event ', emph: 'Aware' },
-  { plain: 'Smarter ', emph: 'Shifts' },
+const DRIVERS = [
+  { label: 'Forecast weather', text: 'Rain expected Friday evening' },
+  { label: 'Nearby event', text: 'Large event close to your location on Saturday' },
+  { label: 'Your concept', text: 'Full-service dining, dinner-led week' },
 ]
 
-function LogoRowA() {
+function SampleOutlook() {
   return (
-    <div className="integration-logo">
-      {rowA.map((item, i) => (
-        <div key={i} className="rt-marquee-left-text rt-heading-one rt-color-black rt-no-wrap">
-          {item.plain}
-          <span className="rt-change-font">{item.emph}</span>
+    <figure id="Sample-Outlook" className="sample-outlook">
+      <figcaption className="sample-outlook-label">Sample outlook &mdash; illustrative data</figcaption>
+      <div className="sample-outlook-body">
+        <div className="sample-outlook-week">
+          <h3 className="sample-outlook-title">Week ahead</h3>
+          <ol className="sample-outlook-bars">
+            {WEEK.map(({ day, level }) => (
+              <li key={day} className="sample-outlook-day">
+                <span className={`sample-outlook-bar sample-outlook-bar--l${level}`} aria-hidden="true"></span>
+                <span className="sample-outlook-day-name">{day}</span>
+              </li>
+            ))}
+          </ol>
+          <p className="sample-outlook-note">Taller bars mean higher expected demand.</p>
         </div>
-      ))}
-    </div>
-  )
-}
-
-function LogoRowB() {
-  return (
-    <div className="integration-logo--1">
-      {rowB.map((item, i) => (
-        <div key={i} className="rt-marquee-left-text rt-heading-one rt-color-black rt-no-wrap">
-          {item.span ? (
-            <>
-              <span className="text-span-3">{item.plain}</span>
-              {item.rest}
-            </>
-          ) : (
-            <>
-              {item.plain}
-              <span className="rt-change-font">{item.emph}</span>
-            </>
-          )}
+        <div className="sample-outlook-drivers">
+          <h3 className="sample-outlook-title">What&rsquo;s behind it</h3>
+          <ul>
+            {DRIVERS.map(({ label, text }) => (
+              <li key={label}>
+                <strong>{label}</strong>
+                <span>{text}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-      ))}
-    </div>
+      </div>
+    </figure>
   )
 }
 
 export default function Integrations() {
   return (
     <section className="integration-wrapper">
-      <div
-        data-wf-target='[[["6aa935b3aacd1b5b9fc5d716","f07ece68-3db4-5158-c34a-abf1066f67c0"],[]]]'
-        className="integration-logo-wrapper"
-      >
-        <h2
-          data-wf-target='[[["6aa935b3aacd1b5b9fc5d716","f07ece68-3db4-5158-c34a-abf1066f67c3"],[]]]'
-          className="integration-heading"
-        >
-          Everything your <span className="text-span-19">Business</span> needs, before it starts.
+      <div className="integration-logo-wrapper">
+        <h2 className="integration-heading">
+          Demand insights for the <span className="text-span-19">decisions</span> ahead.
         </h2>
-        <p
-          data-wf-target='[[["6aa935b3aacd1b5b9fc5d716","f07ece68-3db4-5158-c34a-abf1066f67c5"],[]]]'
-          className="integration-text"
-        >
-          ForeShift connects demand, weather, events and operational signals so your team can staff
-          smarter, prep ahead and waste less.
+        <p className="integration-text">
+          Compare service periods, explore the week ahead, and understand the weather and events behind the outlook.
         </p>
-        <div
-          data-wf-target='[[["6aa935b3aacd1b5b9fc5d716","cfce0429-b2ba-8f79-8393-e6fbbadb3e51"],[]]]'
-          className="integration-content"
-        >
-          <LogoRowA />
-          <LogoRowA />
-        </div>
-        <div
-          data-wf-target='[[["6aa935b3aacd1b5b9fc5d716","97522c1b-d8ed-537d-d688-128d932b440b"],[]]]'
-          className="integration-content-1"
-        >
-          <LogoRowB />
-          <LogoRowB />
-        </div>
+        <SampleOutlook />
       </div>
-      <section
-        data-wf-target='[[["6aa935b3aacd1b5b9fc5d716","ae8b4b08-4f8f-a62e-6dbe-7b3b8df5e9a8"],[]]]'
-        className="btn-container"
-      >
+      <section className="btn-container">
         <a href={EXTERNAL.signUp} target="_blank" rel="noopener" className="get-started w-button">
-          Explore in Action
+          {CTA_LABEL}
         </a>
       </section>
     </section>

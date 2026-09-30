@@ -54,7 +54,7 @@ visible page content).
 ## File ownership (avoid collisions — only touch your files)
 | Agent | Owns |
 |---|---|
-| Section A (Hero, Challenge, Testimonial slider) | `src/components/sections/Hero.jsx`, `Challenge.jsx`, `TestimonialSlider.jsx`, `src/styles/globals.css` §HeroChallengeSlider (clearly commented block) |
+| Section A (Hero, Challenge, Testimonial slider) | `src/components/sections/Hero.jsx`, `Challenge.jsx`, `ProblemExamples.jsx` (was `TestimonialSlider.jsx`, replaced by static cards per the client review), `src/styles/globals.css` §HeroChallengeSlider (clearly commented block) |
 | Section B (Features, Integrations/marquee) | `src/components/sections/Features.jsx`, `Integrations.jsx`, data arrays under `src/components/sections/` as needed |
 | Section C (How it Works, Form, Footer content) | `src/components/sections/HowItWorks.jsx`, `EarlyAccessForm.jsx` (Footer.jsx is shared, already built — don't touch) |
 | Interactions | `src/animations/**`, `src/styles/interactions.css` |
@@ -74,3 +74,13 @@ section for their own components, appended, never editing another agent's block.
 - Parity at all 4 widths: heights equal, diff pixels listed per width, remaining diffs explained.
 - No console errors/warnings from your code in the dev server.
 - `npx oxlint src/<your files>` clean.
+
+## Update — client marketing review (2026-09-29)
+Supersedes the 1:1 Webflow parity rules wherever they conflict. The client's "Marketing Page Design
+Review & Feedback" asked for new copy, static content and SEO changes, so: the IX3 reveal/marquee
+timelines and `src/styles/interactions.css` were removed (content is visible without scroll
+animation; Lenis + circle parallax remain and are skipped under `prefers-reduced-motion`); the
+testimonial slider became static cards (`ProblemExamples.jsx`); the slogan marquee became a real-text
+sample outlook (`Integrations.jsx`). `scripts/prerender.mjs` now prerenders every route in
+`PAGE_META` and writes sitemap/robots/JSON-LD for production only (non-production builds are
+`noindex`). Add new pages to `ROUTES` + `PAGE_META` in `src/config/site.js`.

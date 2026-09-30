@@ -3,13 +3,18 @@ import { Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import ScrollManager from './components/ScrollManager'
+import Seo from './components/Seo'
 import Interactions from './animations/Interactions'
 import { ROUTES } from './config/site'
 import Home from './pages/Home'
 
-// Code-split: legal pages are lazy so their JS (react-router route code + content) doesn't add to
+// Code-split: every non-home page is lazy so their JS (react-router route code + content) doesn't add to
 // Home's initial bundle — most visitors never load these, and Home is the page Lighthouse/LCP
 // performance was tuned against.
+const HowItWorksPage = lazy(() => import('./pages/HowItWorksPage'))
+const NoPos = lazy(() => import('./pages/NoPos'))
+const Coverage = lazy(() => import('./pages/Coverage'))
+const PricingPage = lazy(() => import('./pages/PricingPage'))
 const Terms = lazy(() => import('./pages/Terms'))
 const Privacy = lazy(() => import('./pages/Privacy'))
 const Refunds = lazy(() => import('./pages/Refunds'))
@@ -18,6 +23,7 @@ const Eligibility = lazy(() => import('./pages/Eligibility'))
 export default function App() {
   return (
     <>
+      <Seo />
       <ScrollManager />
       <Interactions />
       <Navbar />
@@ -32,6 +38,10 @@ export default function App() {
           <Suspense fallback={null}>
             <Routes>
               <Route path={ROUTES.home} element={<Home />} />
+              <Route path={ROUTES.howItWorks} element={<HowItWorksPage />} />
+              <Route path={ROUTES.noPos} element={<NoPos />} />
+              <Route path={ROUTES.coverage} element={<Coverage />} />
+              <Route path={ROUTES.pricing} element={<PricingPage />} />
               <Route path={ROUTES.terms} element={<Terms />} />
               <Route path={ROUTES.privacy} element={<Privacy />} />
               <Route path={ROUTES.refunds} element={<Refunds />} />

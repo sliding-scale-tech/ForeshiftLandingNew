@@ -1,15 +1,16 @@
-import { Link } from 'react-router-dom'
-import { EXTERNAL, LOGO, ROUTES, SECTIONS } from '../config/site'
+import { Link, useLocation } from 'react-router-dom'
+import { CTA_LABEL, EXTERNAL, LOGO, NAV_LINKS, ROUTES } from '../config/site'
 
 /**
  * Webflow `w-nav` navbar. Markup mirrors the export 1:1 so the global stylesheet applies
  * unchanged. Mobile menu behaviour lives in src/animations (owned by the interactions layer).
  *
- * SECTIONS are in-page anchors on Home — from any other route (a legal page) they need to
- * navigate back to "/" first, so every link goes through react-router's <Link> to "/#id"; on
- * Home itself this is the same client-side transition, just with an unchanged pathname.
+ * Every NAV_LINKS entry is a react-router <Link> to a route (optionally with a #section on Home),
+ * so it works the same from any page. A link to a page of its own gets `w--current` while that page
+ * is open — the same pill highlight the export used for the in-page scroll-spy.
  */
 export default function Navbar() {
+  const { pathname } = useLocation()
   return (
     <section className="navbar-wrapper">
       <div
@@ -34,13 +35,21 @@ export default function Navbar() {
             />
           </Link>
           <nav role="navigation" className="nav-menu w-nav-menu">
-            {SECTIONS.map((s) => (
-              <Link key={s.id} to={`${ROUTES.home}#${s.id}`} className="nav-link w-nav-link">
-                {s.label}
+            {NAV_LINKS.map((l) => (
+              <Link
+                key={l.label}
+                to={l.to}
+                className={`nav-link w-nav-link${l.to === pathname ? ' w--current' : ''}`}
+                aria-current={l.to === pathname ? 'page' : undefined}
+              >
+                {l.label}
               </Link>
             ))}
+            <a href={EXTERNAL.signIn} target="_blank" rel="noopener" className="nav-link w-nav-link">
+              Sign in
+            </a>
             <a href={EXTERNAL.signUp} target="_blank" rel="noopener" className="rt-main-button-2 w-button">
-              Sign Up
+              {CTA_LABEL}
             </a>
           </nav>
           <div className="menu-button w-nav-button">
