@@ -28,10 +28,10 @@ export default function Hero() {
         // "clear, close-up product screenshot showing demand by period and its drivers").
         loading="eager"
         fetchPriority="high"
-        width="1282"
-        height="1223"
-        sizes="(max-width: 991px) 92vw, 960px"
-        srcSet="/images/hero-outlook-screenshot-p-500.webp 500w, /images/hero-outlook-screenshot-p-800.webp 800w, /images/hero-outlook-screenshot.webp 1282w"
+        width="1586"
+        height="992"
+        sizes="(max-width: 991px) 92vw, 1280px"
+        srcSet="/images/hero-outlook-screenshot-p-500.webp 500w, /images/hero-outlook-screenshot-p-800.webp 800w, /images/hero-outlook-screenshot-p-1080.webp 1080w, /images/hero-outlook-screenshot.webp 1586w"
         alt="ForeShift Daily Outlook: expected demand for each daypart, with a demand chart and the top drivers behind it"
         className="hero-image hero-image--screenshot"
       />
