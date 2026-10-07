@@ -7,6 +7,7 @@ export const ROUTES = {
   noPos: '/demand-insights-without-pos',
   coverage: '/coverage',
   pricing: '/pricing',
+  contact: '/contact',
   terms: '/terms-and-conditions',
   privacy: '/privacy-policy',
   refunds: '/refunds-cancellation',
@@ -14,13 +15,14 @@ export const ROUTES = {
 }
 
 // Client review (Marketing Page Design Review & Feedback): nav is Product · How it works · Coverage ·
-// FAQ · Sign in · Get started. `to` is a route, optionally with a #section — every link lands on a
+// FAQ · Contact us · Sign in · Get started. `to` is a route, optionally with a #section — every link lands on a
 // real destination.
 export const NAV_LINKS = [
   { label: 'Product', to: `${ROUTES.home}#Product-Section` },
   { label: 'How it works', to: ROUTES.howItWorks },
   { label: 'Coverage', to: ROUTES.coverage },
   { label: 'FAQ', to: `${ROUTES.home}#FAQ-Section` },
+  { label: 'Contact us', to: ROUTES.contact },
 ]
 
 export const FOOTER_LINKS = [
@@ -30,6 +32,7 @@ export const FOOTER_LINKS = [
   { label: 'Coverage', to: ROUTES.coverage },
   { label: 'Pricing', to: ROUTES.pricing },
   { label: 'FAQ', to: `${ROUTES.home}#FAQ-Section` },
+  { label: 'Contact us', to: ROUTES.contact },
 ]
 
 // Added for Stripe's website checklist (docs.stripe.com/get-started/checklist/website) —
@@ -102,6 +105,10 @@ export const PAGE_META = {
     title: 'Pricing | ForeShift',
     description:
       'ForeShift plans start at $99 per month, billed monthly in US dollars. Compare Event Intelligence, Dynamic Scheduling and Sales Forecasting.',
+  },
+  [ROUTES.contact]: {
+    title: 'Contact Us | ForeShift',
+    description: 'Questions about ForeShift, pricing or coverage? Send us a message and we will reply by email.',
   },
   [ROUTES.terms]: {
     title: 'Terms and Conditions | ForeShift',

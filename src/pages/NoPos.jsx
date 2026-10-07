@@ -62,7 +62,7 @@ export default function NoPos() {
             Why no connection is <span className="text-span-19">needed.</span>
           </h2>
           <p className="info-body">
-            The outlook is about demand in your area &mdash; how busy a concept like yours is expected to be in your part of
+            The outlook is about demand in your area, how busy a concept like yours is expected to be in your part of
             the city, given the weather and what is happening nearby. That doesn&rsquo;t depend on your till, so there is
             nothing to install, no access to grant and no waiting on an integration.
           </p>
@@ -80,8 +80,8 @@ export default function NoPos() {
           </h2>
           <p className="info-body">
             If you want more, the Sales Forecasting plan accepts a POS export or CSV of your historical data. With it you get a
-            thirty-day forward revenue projection and a view of predicted versus actual. It is a file you upload &mdash; there is
-            no live connection to your POS &mdash; and it is never required to see your demand outlook.
+            thirty-day forward revenue projection and a view of predicted versus actual. It is a file you upload, there is
+            no live connection to your POS, and it is never required to see your demand outlook.
           </p>
           <p className="info-links-row info-links-row--left">
             <Link to={ROUTES.pricing} className="info-link">Compare plans</Link>

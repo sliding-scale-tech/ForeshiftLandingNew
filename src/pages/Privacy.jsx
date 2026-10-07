@@ -13,23 +13,23 @@ export default function Privacy() {
     >
       <h2>1. Information we collect</h2>
       <p>
-        <strong>Account information</strong> — your name, email address, and password credential when you create an
+        <strong>Account information</strong>: your name, email address, and password credential when you create an
         account or join the waitlist.
       </p>
       <p>
-        <strong>Venue information</strong> — the venue address you enter and the concept type you select. We geocode
+        <strong>Venue information</strong>: the venue address you enter and the concept type you select. We geocode
         the address in order to place your venue in the correct zone.
       </p>
       <p>
-        <strong>Operational feedback</strong> — the &quot;how busy were you actually&quot; entries you choose to log
+        <strong>Operational feedback</strong>: the &quot;how busy were you actually&quot; entries you choose to log
         after a shift.
       </p>
       <p>
-        <strong>Payment information</strong> — handled by Stripe. We receive a token, the last four digits, the card
+        <strong>Payment information</strong>: handled by Stripe. We receive a token, the last four digits, the card
         brand, and the expiry date for your records. We never receive or store your full card number.
       </p>
       <p>
-        <strong>Usage and device data</strong> — pages viewed, approximate location derived from IP address, browser
+        <strong>Usage and device data</strong>: pages viewed, approximate location derived from IP address, browser
         and device type, collected to keep the service working and secure.
       </p>
       <h2>2. How we use it</h2>
@@ -38,20 +38,20 @@ export default function Privacy() {
       <p>- To process payments, issue receipts, and manage subscriptions.</p>
       <p>- To provide support and to contact you about your account, purchases, and service changes.</p>
       <p>- To detect, prevent, and investigate fraud, abuse, and security incidents.</p>
-      <p>- To send product and marketing email — only where you have opted in, and you can unsubscribe at any time.</p>
+      <p>- To send product and marketing email, only where you have opted in, and you can unsubscribe at any time.</p>
       <h2>3. How we share it</h2>
       <p>ForeShift does not sell your personal information. We share it only with:</p>
-      <p>- <strong>Stripe</strong> — to process payments and manage subscriptions.</p>
+      <p>- <strong>Stripe</strong>: to process payments and manage subscriptions.</p>
       <p>
-        - <strong>Service providers</strong> — hosting, geocoding, email delivery, event and weather data, and
+        - <strong>Service providers</strong>: hosting, geocoding, email delivery, event and weather data, and
         analytics, each bound to use the data only to provide their service to us. Current subprocessor list: TBD.
       </p>
       <p>
-        - <strong>Legal and safety</strong> — where required by law, or to protect the rights, safety, and property
+        - <strong>Legal and safety</strong>: where required by law, or to protect the rights, safety, and property
         of ForeShift, our customers, or the public.
       </p>
       <p>
-        - <strong>Business transfer</strong> — if ForeShift is involved in a merger, acquisition, or sale of assets,
+        - <strong>Business transfer</strong>: if ForeShift is involved in a merger, acquisition, or sale of assets,
         with notice to you.
       </p>
       <p>
@@ -61,7 +61,7 @@ export default function Privacy() {
       <h2>4. Cookies</h2>
       <p>
         We use cookies and similar technologies that are strictly necessary to run the site and keep you signed in,
-        and — where you consent — analytics cookies to understand how the site is used. You can control cookies in
+        and, where you consent, analytics cookies to understand how the site is used. You can control cookies in
         your browser settings; blocking necessary cookies may break parts of the service. Detailed cookie inventory:
         TBD.
       </p>

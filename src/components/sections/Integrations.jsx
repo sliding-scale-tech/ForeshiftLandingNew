@@ -22,7 +22,7 @@ const DRIVERS = [
 function SampleOutlook() {
   return (
     <figure id="Sample-Outlook" className="sample-outlook">
-      <figcaption className="sample-outlook-label">Sample outlook &mdash; illustrative data</figcaption>
+      <figcaption className="sample-outlook-label">Sample outlook: illustrative data</figcaption>
       <div className="sample-outlook-body">
         <div className="sample-outlook-week">
           <h3 className="sample-outlook-title">Week ahead</h3>

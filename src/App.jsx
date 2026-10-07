@@ -15,6 +15,7 @@ const HowItWorksPage = lazy(() => import('./pages/HowItWorksPage'))
 const NoPos = lazy(() => import('./pages/NoPos'))
 const Coverage = lazy(() => import('./pages/Coverage'))
 const PricingPage = lazy(() => import('./pages/PricingPage'))
+const Contact = lazy(() => import('./pages/Contact'))
 const Terms = lazy(() => import('./pages/Terms'))
 const Privacy = lazy(() => import('./pages/Privacy'))
 const Refunds = lazy(() => import('./pages/Refunds'))
@@ -42,6 +43,7 @@ export default function App() {
               <Route path={ROUTES.noPos} element={<NoPos />} />
               <Route path={ROUTES.coverage} element={<Coverage />} />
               <Route path={ROUTES.pricing} element={<PricingPage />} />
+              <Route path={ROUTES.contact} element={<Contact />} />
               <Route path={ROUTES.terms} element={<Terms />} />
               <Route path={ROUTES.privacy} element={<Privacy />} />
               <Route path={ROUTES.refunds} element={<Refunds />} />

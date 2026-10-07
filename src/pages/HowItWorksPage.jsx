@@ -8,7 +8,7 @@ const DETAIL_STEPS = [
     title: 'Add your location and concept',
     provide: 'Your restaurant’s address and its concept type.',
     happens:
-      'ForeShift places your address in the right part of the city — a defined trade area, or zone — and uses your concept type to pick the demand pattern that fits you. A fast-casual counter and a fine-dining room are not treated the same, even on the same street.',
+      'ForeShift places your address in the right part of the city, a defined trade area, or zone, and uses your concept type to pick the demand pattern that fits you. A fast-casual counter and a fine-dining room are not treated the same, even on the same street.',
   },
   {
     title: 'Set your operating hours',
@@ -18,7 +18,7 @@ const DETAIL_STEPS = [
   },
   {
     title: 'Explore your demand outlook',
-    provide: 'Nothing more — the outlook is ready.',
+    provide: 'Nothing more: the outlook is ready.',
     happens:
       'Open the week ahead, compare service periods, and see the weather and nearby events behind each one. An optional AI Intelligence Pass lets you ask questions about the outlook in plain English.',
   },

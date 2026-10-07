@@ -1,4 +1,4 @@
-// Shared body for Refunds & Eligibility — both pages cover pricing, delivery, cancellation,
+// Shared body for Refunds & Eligibility, both pages cover pricing, delivery, cancellation,
 // refunds, and eligibility/export restrictions together (same content in the sibling ForeShift
 // port too), since Stripe's checklist treats "refund", "cancellation", and "eligibility/export
 // restriction" policies as related fulfillment-policy items that are commonly covered on one page.
@@ -11,22 +11,22 @@ export default function FulfillmentPolicyBody() {
         in one of three tiers. Each tier includes everything in the tier below it:
       </p>
       <p>
-        - <strong>Event Intelligence — 99 US Dollars (USD) per month.</strong> The week&rsquo;s weather forecast,
+        - <strong>Event Intelligence: 99 US Dollars (USD) per month.</strong> The week&rsquo;s weather forecast,
         Detroit sports, concerts, tradeshows, festivals and 5Ks, and a demand signal per event for your zone. Setup
         needs only your zone and concept type.
       </p>
       <p>
-        - <strong>Dynamic Scheduling — 199 US Dollars (USD) per month.</strong> Everything in Event Intelligence,
+        - <strong>Dynamic Scheduling: 199 US Dollars (USD) per month.</strong> Everything in Event Intelligence,
         plus shift-level staffing recommendations, estimated covers per daypart, server and kitchen crew counts, and
         a revenue estimate per shift.
       </p>
       <p>
-        - <strong>Sales Forecasting — 299 US Dollars (USD) per month.</strong> Everything in Dynamic Scheduling, plus
+        - <strong>Sales Forecasting: 299 US Dollars (USD) per month.</strong> Everything in Dynamic Scheduling, plus
         a thirty-day forward revenue projection, POS or CSV historical data upload, variance tracking of predicted
         against actual, and market intelligence for expansion.
       </p>
       <p>
-        ForeShift forecasts <strong>zone demand</strong> — demand for a concept type inside a defined city trade area
+        ForeShift forecasts <strong>zone demand</strong>: demand for a concept type inside a defined city trade area
         at a given day and daypart. It does not forecast your individual venue&rsquo;s sales or covers.
       </p>
       <h2>2. Prices and currency</h2>
@@ -120,8 +120,8 @@ export default function FulfillmentPolicyBody() {
       <h2>7. Before you dispute a charge</h2>
       <p>
         If a charge looks wrong, please contact us first at{' '}
-        <a href="mailto:support@foreshift.ai">support@foreshift.ai</a>. Most issues — a duplicate charge, an
-        unexpected renewal, a report for the wrong zone — are resolved the same day and far faster than a
+        <a href="mailto:support@foreshift.ai">support@foreshift.ai</a>. Most issues, a duplicate charge, an
+        unexpected renewal, a report for the wrong zone, are resolved the same day and far faster than a
         chargeback. Charges appear on your statement as <strong>[Statement descriptor TBD]</strong>.
       </p>
       <h2>8. Contact</h2>

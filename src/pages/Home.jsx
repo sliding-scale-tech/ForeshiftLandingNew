@@ -2,6 +2,7 @@ import Hero from '../components/sections/Hero'
 import Challenge from '../components/sections/Challenge'
 import ProblemExamples from '../components/sections/ProblemExamples'
 import Features from '../components/sections/Features'
+import DashboardPreview from '../components/sections/DashboardPreview'
 import Integrations from '../components/sections/Integrations'
 import ProductOverview from '../components/sections/ProductOverview'
 import Steps from '../components/sections/Steps'
@@ -17,6 +18,7 @@ export default function Home() {
       <Challenge />
       <ProblemExamples />
       <Features />
+      <DashboardPreview />
       <Integrations />
       <ProductOverview />
       <Steps />

@@ -75,8 +75,8 @@ export default function Coverage() {
           </p>
           <p className="info-body">
             Tell us where you operate at{' '}
-            <a href={hello.href} className="info-link">{hello.label}</a>{' '}
-            &mdash; it helps us understand where restaurants need this next.
+            <a href={hello.href} className="info-link">{hello.label}</a>
+            . It helps us understand where restaurants need this next.
           </p>
         </div>
       </section>

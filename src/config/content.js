@@ -1,8 +1,8 @@
 // Page copy that more than one place needs (home sections, dedicated pages, JSON-LD). Every claim
-// here is taken from what the product/legal pages already state — see the notes on each block.
+// here is taken from what the product/legal pages already state, see the notes on each block.
 import { EXTERNAL, ROUTES } from './site'
 
-// Pricing — identical to the legal pages (Terms §4, fulfillment policy): USD, billed monthly, each
+// Pricing, identical to the legal pages (Terms §4, fulfillment policy): USD, billed monthly, each
 // tier includes the one below it.
 export const TIERS = [
   {
@@ -11,10 +11,10 @@ export const TIERS = [
     price: 99,
     features: [
       'Weather forecast for the week',
-      'Sports — all Detroit teams',
+      'Sports: all Detroit teams',
       'Concerts, tradeshows, festivals, 5Ks',
       'Demand signal per event for your zone',
-      'Thirty seconds to start — zone and type only',
+      'Thirty seconds to start: zone and type only',
     ],
   },
   {
@@ -43,7 +43,7 @@ export const TIERS = [
   },
 ]
 
-// Coverage — the fulfillment policy says "Detroit, Michigan is the only market available today".
+// Coverage, the fulfillment policy says "Detroit, Michigan is the only market available today".
 // Concept types: the app's own list (confirmed from its concept table). A venue must have a Detroit
 // address to use the app.
 export const COVERAGE = {

@@ -16,8 +16,8 @@ export default function Terms() {
     >
       <h2>1. What ForeShift provides</h2>
       <p>
-        ForeShift provides forecasts of <strong>zone demand</strong> — the demand for a concept type inside a defined
-        city trade area, at a given day and daypart — together with the event and weather signals affecting that
+        ForeShift provides forecasts of <strong>zone demand</strong>: the demand for a concept type inside a defined
+        city trade area, at a given day and daypart, together with the event and weather signals affecting that
         forecast, and an optional AI Intelligence Pass that answers questions about those forecasts in plain English.
       </p>
       <h2>2. What ForeShift is not</h2>
@@ -54,7 +54,7 @@ export default function Terms() {
       <h2>5. Promotions</h2>
       <p>
         ForeShift is not running a promotional offer at this time. If we offer a discount, trial, or promotional
-        price, its terms — who is eligible, how long it lasts, what you are charged when it ends, and how to cancel —
+        price, its terms (who is eligible, how long it lasts, what you are charged when it ends, and how to cancel)
         will be displayed on the pricing page and at checkout before you agree to it.
       </p>
       <h2>6. Acceptable use</h2>

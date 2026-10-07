@@ -44,9 +44,9 @@ const cards = [
     leftContainerClass: 'w-layout-blockcontainer featured-card-left-container card2 w-container',
     imageTarget:
       '[[["6aa935b3aacd1b5b9fc5d716","9200e114-d3c5-1be7-ace2-84bbd4570683"],[]]]',
-    imageSrc: '/images/ChatGPT-Image-Sep-15-2026-08_23_12-PM-1.avif',
+    imageSrc: '/images/built-around-concept.avif',
     imageSrcSet:
-      '/images/ChatGPT-Image-Sep-15-2026-08_23_12-PM-1-p-500.avif 500w, /images/ChatGPT-Image-Sep-15-2026-08_23_12-PM-1-p-800.avif 800w, /images/ChatGPT-Image-Sep-15-2026-08_23_12-PM-1-p-1080.avif 1080w, /images/ChatGPT-Image-Sep-15-2026-08_23_12-PM-1.avif 1312w',
+      '/images/built-around-concept-p-500.avif 500w, /images/built-around-concept.avif 600w',
   },
   {
     wrapperTarget:
@@ -68,9 +68,9 @@ const cards = [
     leftContainerClass: 'w-layout-blockcontainer featured-card-left-container card3 w-container',
     imageTarget:
       '[[["6aa935b3aacd1b5b9fc5d716","7eeae2a1-3bf1-0a4c-5351-39be08d006cf"],[]]]',
-    imageSrc: '/images/ChatGPT-Image-Sep-15-2026-08_31_28-PM-1.avif',
+    imageSrc: '/images/run-every-shift.avif',
     imageSrcSet:
-      '/images/ChatGPT-Image-Sep-15-2026-08_31_28-PM-1-p-500.avif 500w, /images/ChatGPT-Image-Sep-15-2026-08_31_28-PM-1-p-800.avif 800w, /images/ChatGPT-Image-Sep-15-2026-08_31_28-PM-1-p-1080.avif 1080w, /images/ChatGPT-Image-Sep-15-2026-08_31_28-PM-1.avif 1254w',
+      '/images/run-every-shift-p-500.avif 500w, /images/run-every-shift.avif 600w',
   },
 ]
 

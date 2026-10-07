@@ -10,7 +10,7 @@ export default function Steps() {
         <h2 className="info-heading">
           From address to outlook in <span className="text-span-19">three steps.</span>
         </h2>
-        <p className="info-lead">No POS connection, no integration work &mdash; just your restaurant&rsquo;s details.</p>
+        <p className="info-lead">No POS connection, no integration work, just your restaurant&rsquo;s details.</p>
         <ol className="steps-grid">
           {STEPS.map((s, i) => (
             <li key={s.title} className="info-card step-card">
