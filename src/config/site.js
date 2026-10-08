@@ -15,14 +15,13 @@ export const ROUTES = {
 }
 
 // Client review (Marketing Page Design Review & Feedback): nav is Product · How it works · Coverage ·
-// FAQ · Contact us · Sign in · Get started. `to` is a route, optionally with a #section — every link lands on a
+// FAQ · Sign in · Get started (Contact us lives in the footer). `to` is a route, optionally with a #section — every link lands on a
 // real destination.
 export const NAV_LINKS = [
   { label: 'Product', to: `${ROUTES.home}#Product-Section` },
   { label: 'How it works', to: ROUTES.howItWorks },
   { label: 'Coverage', to: ROUTES.coverage },
   { label: 'FAQ', to: `${ROUTES.home}#FAQ-Section` },
-  { label: 'Contact us', to: ROUTES.contact },
 ]
 
 export const FOOTER_LINKS = [
@@ -32,7 +31,6 @@ export const FOOTER_LINKS = [
   { label: 'Coverage', to: ROUTES.coverage },
   { label: 'Pricing', to: ROUTES.pricing },
   { label: 'FAQ', to: `${ROUTES.home}#FAQ-Section` },
-  { label: 'Contact us', to: ROUTES.contact },
 ]
 
 // Added for Stripe's website checklist (docs.stripe.com/get-started/checklist/website) —

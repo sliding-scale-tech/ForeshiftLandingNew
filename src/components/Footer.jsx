@@ -40,6 +40,9 @@ export default function Footer() {
         <div className="foot-column-links">
           <h3 className="foot-header">Get In Touch</h3>
           <div className="foot-link-wrapper">
+            <Link to={ROUTES.contact} className="foot-link">
+              Contact us
+            </Link>
             {CONTACT_LINKS.map((c) => (
               <a key={c.label} href={c.href} className="foot-link">
                 {c.label}

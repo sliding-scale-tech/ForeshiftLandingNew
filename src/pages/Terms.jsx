@@ -116,9 +116,9 @@ export default function Terms() {
       <p>
         ForeShift
         <br />
-        [Street address TBD]
+        2222 W. Grand River Ave Ste A
         <br />
-        Detroit, MI [ZIP TBD]
+        Okemos, MI 48864
         <br />
         United States
       </p>

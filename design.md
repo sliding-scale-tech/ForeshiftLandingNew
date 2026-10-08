@@ -110,7 +110,7 @@ Desktop-first. `≥1920`, `≥1440`, `≥1280` scale type up; `≤991` (tablet: 
 
 ### 5.1 Navbar
 - Sticky, full width, `#fffc` with 5px backdrop blur, 1px `#e2e8f0` bottom border, padding 15px 40px (20px at ≤991, 0 at ≤767).
-- Items in order: logo (links home), **Product · How it works · Coverage · FAQ · Contact us · Sign in · Get started**.
+- Items in order: logo (links home), **Product · How it works · Coverage · FAQ · Sign in · Get started** (Contact us is in the footer only).
 - Product and FAQ jump to home-page sections; How it works and Coverage open their own pages; Sign in goes to `https://app.foreshift.ai/sign-in`; Get started to `https://app.foreshift.ai/sign-up`.
 - `.nav-link`: padding 10px 15px, text `--nav-link-accessible`. Hover and current (`w--current`, `aria-current="page"`) show a pill: `#fbfbfb` fill, 1px `#e2e8f0` border, 100px radius, text `--heading-color`.
 - "Get started" in the nav is `.rt-main-button-2`: fill `--shift-light-accessible`, white text, 130px radius, 15px 30px padding, 14px/600; hover inverts to transparent with theme-blue border and text.
@@ -147,6 +147,9 @@ Three alternating text/image rows in `.featured-card-wrapper`: "See what is shap
   - Left: seven day bars (Mon-Sun) in `--color-primary`, five relative levels (20/40/60/80/100% height with graduated opacity .35 → 1), 180px tall, 12px gap (6px at ≤479), day names 14px. Right: driver list rows (`--color-background-section` fill, 12px radius) with bold driver name and gray detail.
   - Levels are relative, unlabeled by the retired category names, and show no numbers.
 - Then the "Get started" button.
+
+### 5.6b Interactive sample outlook (iframe)
+Between the feature rows and "Demand insights for the decisions ahead." (`SampleOutlookFrame`). A browser-style window (16px radius, 1px border, soft blue shadow, max 1320px) with a decorative top bar (three dots and the URL `app.foreshift.ai/sample-outlook`) around an iframe of the live app sample (`EXTERNAL.sampleOutlook`). Iframe height 760px desktop, 760px tablet, 680px phone, lazy loaded, sandboxed (`allow-scripts allow-same-origin allow-forms allow-popups`). Caption: "Sample outlook: illustrative data." plus an "open it in a new tab" link. The app page opens with a "Sample" banner containing a Sign in button; the iframe is pulled up inside a clipping `.sample-frame-viewport` (crop 109/153/209/229/249px by frame width, measured against the live page) so the banner is out of view. Re-measure the crops if the app's header changes. All screens: the iframe starts behind a transparent "Click to explore the sample" ("Tap" on touch) gate so touch swipes and the mouse wheel scroll the page instead of being trapped by the frame; once activated the bar shows a "Done" button that restores the gate. Visible frame height is `min(760px, 80svh)` (75svh tablet, 72svh phone). Depends on the app page staying framable (no `X-Frame-Options` / `frame-ancestors` block). Replaces the earlier static screenshot.
 
 ### 5.7 Product overview (`ProductOverview`)
 Heading with accent words, then cards: See what's Coming · Understand Why · Plan with better context · Compare it with Reality ("Record how busy service felt and note unusual conditions."). Each has an illustration and "Illustrative example." caption. The AI card reads "AI explains the demand outlook in plain language, helping you understand what may drive a busy or quiet period for your restaurant."

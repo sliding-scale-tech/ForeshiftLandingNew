@@ -3,7 +3,6 @@ import PageHero from '../components/PageHero'
 import { CONTACT_LINKS } from '../config/site'
 import { LIMITS, TOPICS, validateContact } from '../../shared/contact'
 
-const EMAILS = CONTACT_LINKS.filter((c) => c.href.startsWith('mailto:'))
 const EMPTY = { name: '', email: '', restaurant: '', topic: '', message: '', website: '' }
 
 function Field({ id, label, optional, error, hint, children }) {
@@ -295,10 +294,10 @@ export default function Contact() {
           )}
 
           <aside className="info-card contact-aside">
-            <h2 className="info-card-title">Prefer email?</h2>
-            <p className="info-card-text">Write to us directly and we will reply from the same address.</p>
+            <h2 className="info-card-title">Prefer to reach us directly?</h2>
+            <p className="info-card-text">Call or write to us and we will get back to you.</p>
             <ul className="contact-emails">
-              {EMAILS.map((c) => (
+              {CONTACT_LINKS.map((c) => (
                 <li key={c.href}>
                   <a href={c.href} className="info-link">
                     {c.label}

@@ -855,41 +855,138 @@
   font-weight: 600;
 }
 
-/* Product screenshot between the feature rows and the "Demand insights" section. */
-.dashboard-preview {
+/* Interactive sample outlook (iframe) between the feature rows and the "Demand insights" section. */
+.sample-frame {
   width: 100%;
-  padding: 0 64px 72px;
+  padding: 0 32px 72px;
   background-color: var(--color-white);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.dashboard-preview-image {
+.sample-frame-window {
   width: 100%;
-  max-width: 1100px;
-  height: auto;
+  max-width: 1320px;
+  overflow: hidden;
+  background-color: var(--color-white);
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-large);
   box-shadow: 0 1px 24px 5px #0055ff14;
 }
-@media screen and (max-width: 991px) {
-  .dashboard-preview {
-    padding: 0 20px 48px;
+.sample-frame-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background-color: var(--color-background-section);
+  border-bottom: 1px solid var(--color-border);
+}
+.sample-frame-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--border-radius-pill);
+  background-color: var(--color-border);
+}
+.sample-frame-url {
+  margin-left: 8px;
+  padding: 4px 14px;
+  color: var(--nav-link-accessible);
+  font-size: 13px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-pill);
+}
+/* The app's sample page starts with a "Sample" banner (with a Sign in button) whose height changes
+   with the iframe's own width. The iframe is pulled up by --crop so the banner is clipped away, and
+   made taller by the same amount so the visible window keeps its height. Crops were measured
+   against the live page (banner bottom .. title top): >=920px 103..127, 710-919 147..171,
+   510-709 203..227, 370-509 223..247, <=369 243..267. Re-measure if the app's header changes. */
+.sample-frame-viewport {
+  --view: min(760px, 80svh);
+  position: relative;
+  height: var(--view);
+  overflow: hidden;
+  container-type: inline-size;
+}
+/* Gate: sits over the iframe so swipes and the mouse wheel scroll the page until the visitor opts in. */
+.sample-frame-gate {
+  display: flex;
+  position: absolute;
+  inset: 0;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 0 var(--spacing-large);
+  background: linear-gradient(to bottom, #f8faff00 55%, #f8faffe6);
+  border: 0;
+  cursor: pointer;
+}
+.sample-frame-gate-label {
+  padding: 12px 20px;
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body);
+  font-weight: 600;
+  background-color: var(--shift-light-accessible);
+  border-radius: var(--border-radius-default);
+  box-shadow: 0 8px 24px #0b1a3a33;
+}
+.sample-frame-gate .gate-tap {
+  display: none;
+}
+@media (pointer: coarse) {
+  .sample-frame-gate .gate-click {
+    display: none;
+  }
+  .sample-frame-gate .gate-tap {
+    display: inline;
   }
 }
-
-/* Hero without a product image: the base .hero-wrapper has 0 bottom padding because the screenshot
-   used to sit flush at its foot. Give the buttons room to breathe instead. */
-.hero-wrapper {
-  padding-bottom: 96px;
+.sample-frame-done {
+  margin-left: auto;
+  padding: 6px 16px;
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  background-color: var(--shift-light-accessible);
+  border: 0;
+  border-radius: var(--border-radius-pill);
+  cursor: pointer;
+}
+.sample-frame-iframe {
+  --crop: 109px;
+  display: block;
+  width: 100%;
+  height: calc(var(--view) + var(--crop));
+  margin-top: calc(var(--crop) * -1);
+  border: 0;
+  background-color: var(--color-background-section);
+}
+@container (max-width: 919px) {
+  .sample-frame-iframe { --crop: 153px; }
+}
+@container (max-width: 709px) {
+  .sample-frame-iframe { --crop: 209px; }
+}
+@container (max-width: 509px) {
+  .sample-frame-iframe { --crop: 229px; }
+}
+@container (max-width: 369px) {
+  .sample-frame-iframe { --crop: 249px; }
 }
 @media screen and (max-width: 991px) {
-  .hero-wrapper {
-    padding-bottom: 64px;
+  .sample-frame {
+    padding: 0 20px 48px;
+  }
+  .sample-frame-viewport {
+    --view: min(760px, 75svh);
   }
 }
 @media screen and (max-width: 479px) {
-  .hero-wrapper {
-    padding-bottom: 48px;
+  .sample-frame-url {
+    display: none;
+  }
+  .sample-frame-viewport {
+    --view: min(680px, 72svh);
   }
 }
