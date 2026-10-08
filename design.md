@@ -173,7 +173,7 @@ Six questions, answered directly, in this order: Do I need a POS connection? · 
 `.call-to-action-wrapper`: `cta-background.avif` cover, white text, 72px vertical padding (100px base). Heading "See the demand ahead." (`demand ahead.` accented), body "Explore your restaurant's outlook and the local signals behind it.", button "Get started" (white `.cta-button`).
 
 ### 5.13 Footer
-Background `footer-background.avif` (cover), padding 60px 40px 20px, columns (30% each) for logo, nav links (Product, How it works, Demand insights without a POS, Coverage, Pricing, FAQ), legal links (Terms & Conditions, Privacy Policy, Refunds & Cancellations, Eligibility & Restrictions) and contact (phone, support@, hello@). The phone number is a placeholder and must be replaced before launch.
+Background `footer-background.avif` (cover), padding 60px 40px 20px, columns (30% each) for logo, nav links, legal links and contact (Contact us, support@, hello@, address).
 
 ### 5.14 Legal pages
 `PageHero` (reuses Challenge visuals) + `.legal-body` (max 900px, 80px/64px padding). h2 20px/600 with 48px top margin; links `--color-primary`, underlined; strong text `--heading-color`.
@@ -244,6 +244,6 @@ Home section order: Hero → Challenge → Problem examples → Features → Int
 3. **Demand category names** are not shown in code; confirm the app's approved names, then update copy, screenshots and illustrations together.
 4. **"Estimated covers per daypart"** appears as a Dynamic Scheduling feature while the policy pages say the forecast does not predict a venue's own covers. Reconcile the wording.
 5. **Sample outlook URL** (`https://app.foreshift.ai/sample-outlook`) must exist, or point the secondary button to the on-page `#Sample-Outlook`.
-6. **Placeholder phone number** in the footer.
+6. **No phone number is published** (removed by decision); contact is email and the form only.
 7. **Webmaster tools and conversion tracking** not yet set up.
 8. **Retired-category imagery** needs re-export by the asset owner.

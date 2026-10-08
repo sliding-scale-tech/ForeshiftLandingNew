@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import PageHero from '../components/PageHero'
-import { CONTACT_LINKS } from '../config/site'
+import { ADDRESS, CONTACT_LINKS } from '../config/site'
 import { LIMITS, TOPICS, validateContact } from '../../shared/contact'
 
 const EMPTY = { name: '', email: '', restaurant: '', topic: '', message: '', website: '' }
@@ -294,8 +294,8 @@ export default function Contact() {
           )}
 
           <aside className="info-card contact-aside">
-            <h2 className="info-card-title">Prefer to reach us directly?</h2>
-            <p className="info-card-text">Call or write to us and we will get back to you.</p>
+            <h2 className="info-card-title">Prefer to email us directly?</h2>
+            <p className="info-card-text">Write to us and we will get back to you.</p>
             <ul className="contact-emails">
               {CONTACT_LINKS.map((c) => (
                 <li key={c.href}>
@@ -305,6 +305,16 @@ export default function Contact() {
                 </li>
               ))}
             </ul>
+            <h3 className="contact-subhead">Our address</h3>
+            <address className="contact-address">
+              {ADDRESS.name}
+              <br />
+              {ADDRESS.street}
+              <br />
+              {ADDRESS.city}, {ADDRESS.region} {ADDRESS.postalCode}
+              <br />
+              {ADDRESS.country}
+            </address>
           </aside>
         </div>
       </section>

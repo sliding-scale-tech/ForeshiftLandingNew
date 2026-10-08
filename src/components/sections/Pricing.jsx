@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import CheckIcon from '../CheckIcon'
 import { CTA_LABEL, EXTERNAL, ROUTES } from '../../config/site'
 import { TIERS } from '../../config/content'
+import PaymentNote from '../PaymentNote'
 
 export function TierCards({ compact = false }) {
   return (
@@ -17,7 +18,7 @@ export function TierCards({ compact = false }) {
           <p className="pricing-card-tagline">{tier.tagline}</p>
           <p className="pricing-card-price">
             <span className="pricing-card-price-amount">${tier.price}</span>
-            <span className="pricing-card-price-period"> / month</span>
+            <span className="pricing-card-price-period"> USD / month</span>
           </p>
           {!compact && (
             <>
@@ -53,6 +54,7 @@ export default function Pricing() {
         </p>
       </div>
       <TierCards compact />
+      <PaymentNote />
       <Link to={ROUTES.pricing} className="info-link pricing-more">
         Compare plans and features
       </Link>

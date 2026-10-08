@@ -7,7 +7,7 @@ export default function Privacy() {
       subtitle={
         <>
           This policy explains what ForeShift collects, why, and what we do with it. ForeShift is operated by{' '}
-          <strong>[Legal entity name TBD]</strong>, based in Detroit, Michigan, United States.
+          <strong>ForeShift LLC</strong>, based in Detroit, Michigan, United States.
         </>
       }
     >
@@ -44,7 +44,7 @@ export default function Privacy() {
       <p>- <strong>Stripe</strong>: to process payments and manage subscriptions.</p>
       <p>
         - <strong>Service providers</strong>: hosting, geocoding, email delivery, event and weather data, and
-        analytics, each bound to use the data only to provide their service to us. Current subprocessor list: TBD.
+        analytics, each bound to use the data only to provide their service to us.
       </p>
       <p>
         - <strong>Legal and safety</strong>: where required by law, or to protect the rights, safety, and property
@@ -62,8 +62,7 @@ export default function Privacy() {
       <p>
         We use cookies and similar technologies that are strictly necessary to run the site and keep you signed in,
         and, where you consent, analytics cookies to understand how the site is used. You can control cookies in
-        your browser settings; blocking necessary cookies may break parts of the service. Detailed cookie inventory:
-        TBD.
+        your browser settings; blocking necessary cookies may break parts of the service.
       </p>
       <h2>5. Data retention</h2>
       <p>
@@ -103,11 +102,9 @@ export default function Privacy() {
       <h2>11. Contact Us</h2>
       <p>
         Privacy questions: <a href="mailto:support@foreshift.ai">support@foreshift.ai</a>
-        <br />
-        Phone: (888)2345-6789
       </p>
       <p>
-        ForeShift
+        ForeShift LLC
         <br />
         2222 W. Grand River Ave Ste A
         <br />

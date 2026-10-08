@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero'
 import CallToAction from '../components/sections/CallToAction'
 import { TierCards } from '../components/sections/Pricing'
+import PaymentNote from '../components/PaymentNote'
 import { ROUTES } from '../config/site'
 
 const BILLING = [
@@ -26,6 +27,7 @@ export default function PricingPage() {
       <section className="info-section">
         <div className="info-container info-container--wide">
           <TierCards />
+          <PaymentNote />
         </div>
       </section>
 

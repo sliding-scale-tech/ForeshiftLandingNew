@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import { CONTACT_LINKS, FOOTER_LINKS, LEGAL_LINKS, LOGO, ROUTES } from '../config/site'
+import PaymentNote from './PaymentNote'
+import { ADDRESS, CONTACT_LINKS, FOOTER_LINKS, LEGAL_LINKS, LOGO, ROUTES } from '../config/site'
 
 export default function Footer() {
   return (
@@ -48,9 +49,19 @@ export default function Footer() {
                 {c.label}
               </a>
             ))}
+            <address className="foot-address">
+              {ADDRESS.name}
+              <br />
+              {ADDRESS.street}
+              <br />
+              {ADDRESS.city}, {ADDRESS.region} {ADDRESS.postalCode}
+              <br />
+              {ADDRESS.country}
+            </address>
           </div>
         </div>
       </div>
+      <PaymentNote showCards className="payment-note--footer" />
       <div className="footer-copyright">
         <div className="copyright">
           <p className="foot-text">Developed by </p>

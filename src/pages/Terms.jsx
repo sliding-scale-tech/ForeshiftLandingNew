@@ -9,7 +9,7 @@ export default function Terms() {
       subtitle={
         <>
           These terms govern your use of the ForeShift website at foreshift.ai and the ForeShift product at
-          app.foreshift.ai, operated by <strong>[Legal entity name TBD]</strong> (&quot;ForeShift&quot;,
+          app.foreshift.ai, operated by <strong>ForeShift LLC</strong> (&quot;ForeShift&quot;,
           &quot;we&quot;, &quot;us&quot;). By creating an account or buying a product, you agree to them.
         </>
       }
@@ -105,16 +105,14 @@ export default function Terms() {
       <h2>13. Governing law</h2>
       <p>
         These terms are governed by the laws of the State of Michigan, United States, without regard to conflict of
-        law rules. Venue and dispute resolution: TBD pending legal review.
+        law rules.
       </p>
       <h2>14. Contact Us</h2>
       <p>
         Email: <a href="mailto:support@foreshift.ai">support@foreshift.ai</a>
-        <br />
-        Phone: (888)2345-6789
       </p>
       <p>
-        ForeShift
+        ForeShift LLC
         <br />
         2222 W. Grand River Ave Ste A
         <br />

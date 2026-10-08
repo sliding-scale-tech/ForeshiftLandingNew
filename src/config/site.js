@@ -44,8 +44,22 @@ export const LEGAL_LINKS = [
   { label: 'Eligibility & Restrictions', to: ROUTES.eligibility },
 ]
 
+// Business address (also shown on the legal pages). Keep in sync with Terms, Privacy and the
+// fulfillment policy, and with the PostalAddress in scripts/prerender.mjs structured data.
+export const ADDRESS = {
+  name: 'ForeShift LLC',
+  street: '2222 W. Grand River Ave Ste A',
+  city: 'Okemos',
+  region: 'MI',
+  postalCode: '48864',
+  country: 'United States',
+  countryCode: 'US',
+}
+
+// Cards accepted at checkout (Stripe). Confirm against the Stripe account before launch.
+export const CARD_BRANDS = ['Visa', 'Mastercard', 'American Express', 'Discover']
+
 export const CONTACT_LINKS = [
-  { label: '(888)2345-6789', href: 'tel:+18882345689' }, // placeholder digits, same as the sibling port — this is template contact info, not a real ForeShift number
   { label: 'support@foreshift.ai', href: 'mailto:support@foreshift.ai' },
   { label: 'hello@foreshift.ai', href: 'mailto:hello@foreshift.ai' },
 ]

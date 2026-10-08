@@ -46,7 +46,7 @@ const fontPreloads = uniqueFontFiles
   .map((f) => `<link rel="preload" href="/fonts/${f}" as="font" type="font/woff2" crossorigin>`)
   .join('\n    ')
 
-const { render, PAGE_META, SITE_URL, CONTACT_LINKS, FAQ, TIERS } = await import(pathToFileURL(path.resolve(SSR_OUT, 'entry-server.js')).href)
+const { render, PAGE_META, SITE_URL, CONTACT_LINKS, FAQ, TIERS, ADDRESS } = await import(pathToFileURL(path.resolve(SSR_OUT, 'entry-server.js')).href)
 
 const vercelEnv = process.env.VERCEL_ENV
 const isProduction = process.env.SITE_ENV !== 'staging' && (!vercelEnv || vercelEnv === 'production')
@@ -75,6 +75,14 @@ function jsonLd() {
         '@id': `${SITE_URL}/#organization`,
         name: 'ForeShift',
         url: `${SITE_URL}/`,
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: ADDRESS.street,
+          addressLocality: ADDRESS.city,
+          addressRegion: ADDRESS.region,
+          postalCode: ADDRESS.postalCode,
+          addressCountry: ADDRESS.countryCode,
+        },
         ...(email && { contactPoint: { '@type': 'ContactPoint', contactType: 'customer support', email } }),
       },
       {

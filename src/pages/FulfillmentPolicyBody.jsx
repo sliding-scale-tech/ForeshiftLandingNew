@@ -116,24 +116,21 @@ export default function FulfillmentPolicyBody() {
         They are licensed for use in operating your own venue and may not be resold, redistributed, or used to build
         a competing product.
       </p>
-      <p>- Additional jurisdiction-specific restrictions: TBD pending legal review.</p>
       <h2>7. Before you dispute a charge</h2>
       <p>
         If a charge looks wrong, please contact us first at{' '}
         <a href="mailto:support@foreshift.ai">support@foreshift.ai</a>. Most issues, a duplicate charge, an
         unexpected renewal, a report for the wrong zone, are resolved the same day and far faster than a
-        chargeback. Charges appear on your statement as <strong>[Statement descriptor TBD]</strong>.
+        chargeback.
       </p>
       <h2>8. Contact</h2>
       <p>
         Email: <a href="mailto:support@foreshift.ai">support@foreshift.ai</a>
         <br />
-        Phone: (888)2345-6789
-        <br />
         Support hours: Monday–Friday, 9:00a–6:00p ET
       </p>
       <p>
-        ForeShift
+        ForeShift LLC
         <br />
         2222 W. Grand River Ave Ste A
         <br />

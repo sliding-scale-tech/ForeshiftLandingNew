@@ -7,10 +7,10 @@ import { StrictMode } from 'react'
 import { prerenderToNodeStream } from 'react-dom/static'
 import { StaticRouter } from 'react-router-dom'
 import App from '../../src/App.jsx'
-import { CONTACT_LINKS, PAGE_META, SITE_URL } from '../../src/config/site.js'
+import { ADDRESS, CONTACT_LINKS, PAGE_META, SITE_URL } from '../../src/config/site.js'
 import { FAQ, TIERS } from '../../src/config/content.js'
 
-export { CONTACT_LINKS, FAQ, PAGE_META, SITE_URL, TIERS }
+export { ADDRESS, CONTACT_LINKS, FAQ, PAGE_META, SITE_URL, TIERS }
 
 export async function render(location = '/') {
   const { prelude } = await prerenderToNodeStream(

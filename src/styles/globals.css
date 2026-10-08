@@ -990,3 +990,73 @@
     --view: min(680px, 72svh);
   }
 }
+
+/* Payment note + accepted cards (Stripe checklist), footer and contact address. */
+.payment-note {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: var(--spacing-large) auto 0;
+  text-align: center;
+}
+.payment-note-text {
+  margin: 0;
+  max-width: 560px;
+  color: var(--nav-link-accessible);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-small);
+  line-height: 1.5;
+}
+.payment-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+.payment-card-chip {
+  padding: 6px 12px;
+  color: var(--heading-color);
+  font-family: var(--font-primary);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+.payment-note--footer {
+  margin: 0 auto var(--spacing-medium);
+}
+.foot-address,
+.contact-address {
+  font-style: normal;
+  line-height: 25px;
+}
+.foot-address {
+  margin-top: var(--spacing-small);
+  color: var(--nav-link-accessible);
+  font-size: 15px;
+}
+.contact-address {
+  margin: 0;
+  color: var(--nav-link-accessible);
+  font-size: var(--font-size-body);
+  line-height: 1.6;
+}
+.contact-subhead {
+  margin: var(--spacing-medium) 0 8px;
+  color: var(--heading-color);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body);
+  font-weight: 600;
+}
+@media screen and (max-width: 767px) {
+  .foot-address {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
