@@ -6,12 +6,10 @@ import { validateContact } from "../shared/contact.js";
 // Recipients are fixed here. The client can never choose where mail goes.
 const TO = [
   "info@foreshift.ai",
-  "support@foreshift.ai",
-  "hello@foreshift.ai",
   "dev@foreshift.ai",
 ];
 const FROM =
-  process.env.RESEND_FROM || "ForeShift Website <contact@foreshift.ai>";
+  process.env.RESEND_FROM || "ForeShift Contact Form <contact@foreshift.ai>";
 const MAX_BODY_BYTES = 10 * 1024;
 const RATE = { windowMs: 10 * 60 * 1000, max: 5 };
 
@@ -144,7 +142,7 @@ export default async function handler(req, res) {
   }
 
   const { name, email, restaurant, topic, message } = values;
-  const subject = `[ForeShift website] ${topic} from ${name}`;
+  const subject = `[ForeShift Contact Form] ${topic} from ${name}`;
   const text = [
     `Name: ${name}`,
     `Email: ${email}`,

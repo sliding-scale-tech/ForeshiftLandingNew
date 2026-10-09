@@ -80,7 +80,7 @@ export default function Privacy() {
       <p>
         Depending on where you live, you may have the right to access, correct, export, or delete your personal
         information, to object to or restrict certain processing, and to opt out of marketing email. To exercise any
-        of these, email <a href="mailto:support@foreshift.ai">support@foreshift.ai</a>. We respond within 30 days. We
+        of these, email <a href="mailto:info@foreshift.ai">info@foreshift.ai</a>. We respond within 30 days. We
         will not discriminate against you for exercising these rights.
       </p>
       <h2>8. Children</h2>
@@ -101,7 +101,7 @@ export default function Privacy() {
       </p>
       <h2>11. Contact Us</h2>
       <p>
-        Privacy questions: <a href="mailto:support@foreshift.ai">support@foreshift.ai</a>
+        Privacy questions: <a href="mailto:info@foreshift.ai">info@foreshift.ai</a>
       </p>
       <p>
         ForeShift LLC

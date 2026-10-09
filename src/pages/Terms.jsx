@@ -32,7 +32,7 @@ export default function Terms() {
       <p>
         You must give accurate information, including a real venue address, and keep your credentials secure. You are
         responsible for activity under your account. Tell us promptly at{' '}
-        <a href="mailto:support@foreshift.ai">support@foreshift.ai</a> if you believe your account has been
+        <a href="mailto:info@foreshift.ai">info@foreshift.ai</a> if you believe your account has been
         compromised.
       </p>
       <h2>4. Purchases, billing and renewal</h2>
@@ -109,7 +109,7 @@ export default function Terms() {
       </p>
       <h2>14. Contact Us</h2>
       <p>
-        Email: <a href="mailto:support@foreshift.ai">support@foreshift.ai</a>
+        Email: <a href="mailto:info@foreshift.ai">info@foreshift.ai</a>
       </p>
       <p>
         ForeShift LLC

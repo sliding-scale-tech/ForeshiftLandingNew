@@ -55,12 +55,12 @@ export default function FulfillmentPolicyBody() {
       </p>
       <p>
         - If you have paid and access has not appeared within 24 hours, email{' '}
-        <a href="mailto:support@foreshift.ai">support@foreshift.ai</a> and we will resolve it or refund you in full.
+        <a href="mailto:info@foreshift.ai">info@foreshift.ai</a> and we will resolve it or refund you in full.
       </p>
       <h2>4. Cancellation</h2>
       <p>
         - You may cancel your subscription at any time from your account settings, or by emailing{' '}
-        <a href="mailto:support@foreshift.ai">support@foreshift.ai</a>.
+        <a href="mailto:info@foreshift.ai">info@foreshift.ai</a>.
       </p>
       <p>
         - Cancellation stops the next renewal. Your access continues until the end of the billing period you have
@@ -91,7 +91,7 @@ export default function FulfillmentPolicyBody() {
         forecasts zone demand; it does not guarantee your venue&rsquo;s results.
       </p>
       <p>
-        <strong>How to request a refund:</strong> email <a href="mailto:support@foreshift.ai">support@foreshift.ai</a>{' '}
+        <strong>How to request a refund:</strong> email <a href="mailto:info@foreshift.ai">info@foreshift.ai</a>{' '}
         with the email address used on the order and the approximate purchase date. We respond within{' '}
         <strong>2 business days</strong>. Approved refunds are returned to the original payment method, normally
         within 5–10 business days depending on your bank.
@@ -119,13 +119,13 @@ export default function FulfillmentPolicyBody() {
       <h2>7. Before you dispute a charge</h2>
       <p>
         If a charge looks wrong, please contact us first at{' '}
-        <a href="mailto:support@foreshift.ai">support@foreshift.ai</a>. Most issues, a duplicate charge, an
+        <a href="mailto:info@foreshift.ai">info@foreshift.ai</a>. Most issues, a duplicate charge, an
         unexpected renewal, a report for the wrong zone, are resolved the same day and far faster than a
         chargeback.
       </p>
       <h2>8. Contact</h2>
       <p>
-        Email: <a href="mailto:support@foreshift.ai">support@foreshift.ai</a>
+        Email: <a href="mailto:info@foreshift.ai">info@foreshift.ai</a>
         <br />
         Support hours: Monday–Friday, 9:00a–6:00p ET
       </p>

@@ -160,7 +160,7 @@ Heading with accent words, then cards: See what's Coming · Understand Why · Pl
 - Links beneath: "See the full walkthrough", "Insights without a POS connection" (`.info-link`).
 
 ### 5.9 Coverage
-- Home teaser: "Available in Detroit, Michigan." Dedicated page: supported markets (single 480px card, status "Available now"), supported concepts as a check list (Breakfast / Brunch Cafe, Casual Dining, Cocktail Lounge, Coffee Shop, Fast Casual, Fine Dining, Neighborhood / Casual Bar, Sports Bar, Upscale Casual, and any others in `COVERAGE.concepts`), "How your address is matched", and "If your address is outside a supported market" (no outlook is produced; buying a plan does not extend coverage; invite to email hello@foreshift.ai).
+- Home teaser: "Available in Detroit, Michigan." Dedicated page: supported markets (single 480px card, status "Available now"), supported concepts as a check list (Breakfast / Brunch Cafe, Casual Dining, Cocktail Lounge, Coffee Shop, Fast Casual, Fine Dining, Neighborhood / Casual Bar, Sports Bar, Upscale Casual, and any others in `COVERAGE.concepts`), "How your address is matched", and "If your address is outside a supported market" (no outlook is produced; buying a plan does not extend coverage; invite to email info@foreshift.ai).
 - Check icon: `CheckIcon`, `.pricing-check-icon`, `--color-primary`.
 
 ### 5.10 Pricing
@@ -187,7 +187,7 @@ Background `footer-background.avif` (cover), padding 60px 40px 20px, columns (30
 | `/demand-insights-without-pos` | No POS | Explains demand-by-area forecast, optional CSV upload, no live POS link |
 | `/coverage` | Coverage | Markets, concepts, unsupported-address behavior |
 | `/pricing` | Pricing | Full plan detail |
-| `/contact` | Contact us | Validated form that emails info@, support@, hello@ and dev@ via Resend (`/api/contact`) |
+| `/contact` | Contact us | Validated form that emails info@ and dev@ via Resend (`/api/contact`) |
 | `/terms-and-conditions`, `/privacy-policy`, `/refunds-cancellation`, `/eligibility-restrictions` | Legal | Stripe checklist and trust |
 
 Home section order: Hero → Challenge → Problem examples → Features → Integrations (sample outlook) → Product overview → Steps → Coverage teaser → Pricing → FAQ → Final CTA. Dedicated pages must not duplicate home text; home sections summarize and link out.
