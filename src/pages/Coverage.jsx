@@ -4,7 +4,7 @@ import CallToAction from '../components/sections/CallToAction'
 import { CONTACT_LINKS } from '../config/site'
 import { COVERAGE } from '../config/content'
 
-const hello = CONTACT_LINKS.find((c) => c.href === 'mailto:hello@foreshift.ai')
+const hello = CONTACT_LINKS.find((c) => c.href.startsWith('mailto:'))
 
 export default function Coverage() {
   return (

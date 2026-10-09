@@ -173,7 +173,7 @@ Six questions, answered directly, in this order: Do I need a POS connection? · 
 `.call-to-action-wrapper`: `cta-background.avif` cover, white text, 72px vertical padding (100px base). Heading "See the demand ahead." (`demand ahead.` accented), body "Explore your restaurant's outlook and the local signals behind it.", button "Get started" (white `.cta-button`).
 
 ### 5.13 Footer
-Background `footer-background.avif` (cover), padding 60px 40px 20px, columns (30% each) for logo, nav links, legal links and contact (Contact us, support@, hello@, address).
+Background `footer-background.avif` (cover), padding 60px 40px 20px, columns (30% each) for logo, nav links, legal links and contact (Contact us, info@, address).
 
 ### 5.14 Legal pages
 `PageHero` (reuses Challenge visuals) + `.legal-body` (max 900px, 80px/64px padding). h2 20px/600 with 48px top margin; links `--color-primary`, underlined; strong text `--heading-color`.
@@ -187,7 +187,7 @@ Background `footer-background.avif` (cover), padding 60px 40px 20px, columns (30
 | `/demand-insights-without-pos` | No POS | Explains demand-by-area forecast, optional CSV upload, no live POS link |
 | `/coverage` | Coverage | Markets, concepts, unsupported-address behavior |
 | `/pricing` | Pricing | Full plan detail |
-| `/contact` | Contact us | Validated form that emails support@ and hello@ via Resend (`/api/contact`) |
+| `/contact` | Contact us | Validated form that emails info@, support@, hello@ and dev@ via Resend (`/api/contact`) |
 | `/terms-and-conditions`, `/privacy-policy`, `/refunds-cancellation`, `/eligibility-restrictions` | Legal | Stripe checklist and trust |
 
 Home section order: Hero → Challenge → Problem examples → Features → Integrations (sample outlook) → Product overview → Steps → Coverage teaser → Pricing → FAQ → Final CTA. Dedicated pages must not duplicate home text; home sections summarize and link out.

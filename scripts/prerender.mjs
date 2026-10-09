@@ -58,7 +58,7 @@ const esc = (v) => String(v).replace(/&/g, '&amp;').replace(/"/g, '&quot;').repl
 // in the footer.
 // No ratings/reviews (none exist) and no sameAs profiles (none verified).
 function jsonLd() {
-  const email = CONTACT_LINKS.find((c) => c.href.startsWith('mailto:support'))?.href.replace('mailto:', '')
+  const email = CONTACT_LINKS.find((c) => c.href.startsWith('mailto:'))?.href.replace('mailto:', '')
   const plan = (name, price) => ({
     '@type': 'Offer',
     name,

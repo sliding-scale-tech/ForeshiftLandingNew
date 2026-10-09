@@ -60,8 +60,7 @@ export const ADDRESS = {
 export const CARD_BRANDS = ['Visa', 'Mastercard', 'American Express', 'Discover']
 
 export const CONTACT_LINKS = [
-  { label: 'support@foreshift.ai', href: 'mailto:support@foreshift.ai' },
-  { label: 'hello@foreshift.ai', href: 'mailto:hello@foreshift.ai' },
+  { label: 'info@foreshift.ai', href: 'mailto:info@foreshift.ai' },
 ]
 
 // The product app lives on its own subdomain. Every "Get started" CTA sends a new visitor to

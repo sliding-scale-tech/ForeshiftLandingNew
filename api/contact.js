@@ -4,7 +4,12 @@
 import { validateContact } from "../shared/contact.js";
 
 // Recipients are fixed here. The client can never choose where mail goes.
-const TO = ["support@foreshift.ai", "hello@foreshift.ai", "dev@foreshift.ai"];
+const TO = [
+  "info@foreshift.ai",
+  "support@foreshift.ai",
+  "hello@foreshift.ai",
+  "dev@foreshift.ai",
+];
 const FROM =
   process.env.RESEND_FROM || "ForeShift Website <contact@foreshift.ai>";
 const MAX_BODY_BYTES = 10 * 1024;
