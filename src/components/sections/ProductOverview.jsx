@@ -88,11 +88,11 @@ export default function ProductOverview() {
               Record how busy service felt and note unusual conditions.
             </p>
             <img
-              src="/images/ChatGPT-Image-Sep-15-2026-11_25_09-PM.avif"
+              src="/images/user-feedback-demand-score-dashboard.png"
               loading="lazy"
-              sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 940px"
-              srcSet="/images/e387a51beec17c2b64b6617665820f11_ChatGPT-Image-Sep-15-2026-11_25_09-PM-p-500.avif 500w, /images/e387a51beec17c2b64b6617665820f11_ChatGPT-Image-Sep-15-2026-11_25_09-PM-p-800.avif 800w, /images/e387a51beec17c2b64b6617665820f11_ChatGPT-Image-Sep-15-2026-11_25_09-PM-p-1080.avif 1080w, /images/e387a51beec17c2b64b6617665820f11_ChatGPT-Image-Sep-15-2026-11_25_09-PM-p-1600.avif 1600w, /images/ChatGPT-Image-Sep-15-2026-11_25_09-PM.avif 1908w"
-              alt="Illustration: recording how busy service felt"
+              width="1938"
+              height="811"
+              alt="Dashboard showing 100% user satisfaction and a demand score chart"
             />
             <p className="illustration-caption">Illustrative example.</p>
           </div>
