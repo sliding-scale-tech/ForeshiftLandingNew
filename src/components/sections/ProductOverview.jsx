@@ -46,11 +46,10 @@ export default function ProductOverview() {
             className="w-layout-blockcontainer customer-engagement-card2 w-container"
           >
             <h3 className="customer-enagagement-card1-title">
-              Understand <span className="text-span-23">Why</span>
+              Ask your forecast a <span className="text-span-23">question</span>.
             </h3>
             <p className="paragraph">
-              AI explains the demand outlook in plain language, helping you understand what may drive a busy or quiet
-              period for your restaurant.
+              AI Pass explains the demand behind the number.
             </p>
             <img
               src="/images/ChatGPT-Image-Sep-15-2026-10_35_25-PM-1.avif"

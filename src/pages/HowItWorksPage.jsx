@@ -20,7 +20,7 @@ const DETAIL_STEPS = [
     title: 'Explore your demand outlook',
     provide: 'Nothing more: the outlook is ready.',
     happens:
-      'Open the week ahead, compare service periods, and see the weather and nearby events behind each one. An optional AI Intelligence Pass lets you ask questions about the outlook in plain English.',
+      'Open the week ahead, compare service periods, and see the weather and nearby events behind each one. An optional AI Pass lets you ask the forecast a question in plain language.',
   },
 ]
 
@@ -38,8 +38,8 @@ const OUTLOOK_PARTS = [
     text: 'Forecast weather and nearby events, such as sports, concerts, festivals and tradeshows, shown next to the outlook they influence.',
   },
   {
-    title: 'A plain-language explanation',
-    text: 'AI explains the outlook in everyday words, helping you understand what may drive a busy or quiet period.',
+    title: 'AI Pass',
+    text: 'Ask your forecast a question. AI Pass explains the demand behind the number, using the same Daily Outlook, Weekly Outlook, Events, and Weather for your zone and restaurant type.',
   },
 ]
 

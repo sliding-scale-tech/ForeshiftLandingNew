@@ -95,7 +95,7 @@ export const FAQ = [
   },
   {
     q: 'How does AI help?',
-    a: 'AI explains the demand outlook in plain language, helping you understand what may drive a busy or quiet period for your restaurant. An optional AI Intelligence Pass also lets you ask questions about your forecasts in plain English. The forecast itself comes from the demand model; AI explains it.',
+    a: 'AI Pass is a chat that explains your ForeShift forecast in plain language. Ask why tonight looks busy, which area is strongest, or what an event or the weather does to demand. It answers from the same Daily Outlook, Weekly Outlook, Events, and Weather you already see, for your zone and restaurant type. The forecast itself comes from the demand model; AI Pass explains it.',
   },
   {
     q: 'Where is ForeShift available?',
