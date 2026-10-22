@@ -1062,10 +1062,33 @@
 }
 
 /* "Understand What's Driving Demand" block under the three problem cards. */
+/* The blue band belongs to this block only: it starts at the block's top edge (below the card row,
+   which stays fully on the pale background) and runs to the section's bottom edge. The block's top
+   margin is the gap between the cards and the band; padding-top is the space above the heading. */
+.problem-examples {
+  isolation: isolate;
+  overflow-x: clip;
+}
+.problem-examples .f-testimonial-background {
+  display: none;
+}
 .problem-driving {
+  position: relative;
   max-width: 800px;
   margin: var(--spacing-large) auto 0;
+  padding-top: 48px;
   text-align: center;
+}
+.problem-driving::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: -72px;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background-color: #eef4ff;
 }
 .problem-driving-title {
   margin: 0 0 var(--spacing-small);
