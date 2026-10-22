@@ -32,6 +32,14 @@ export default function ProblemExamples() {
             </li>
           ))}
         </ul>
+        <div className="problem-driving">
+          <h3 className="problem-driving-title">Understand What&rsquo;s Driving Demand</h3>
+          <p className="problem-driving-text">
+            ForeShift&rsquo;s integrated AI connects your restaurant profile with insights from our patent-pending demand
+            technology. It uses your concept, location, nearby events and weather forecast to explain your demand outlook
+            and answer demand questions, helping you make more informed decisions, all within your dashboard.
+          </p>
+        </div>
       </div>
     </div>
   )

@@ -1060,3 +1060,35 @@
     line-height: 20px;
   }
 }
+
+/* "Understand What's Driving Demand" block under the three problem cards. */
+.problem-driving {
+  max-width: 800px;
+  margin: var(--spacing-large) auto 0;
+  text-align: center;
+}
+.problem-driving-title {
+  margin: 0 0 var(--spacing-small);
+  color: var(--heading-color);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-h3);
+  font-weight: 600;
+  line-height: 1.3;
+}
+.problem-driving-text {
+  margin: 0;
+  color: var(--nav-link-accessible);
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+}
+@media screen and (max-width: 479px) {
+  .problem-driving-title {
+    font-size: 22px;
+  }
+  .problem-driving-text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
