@@ -1075,8 +1075,8 @@
 .problem-driving {
   position: relative;
   max-width: 800px;
-  margin: var(--spacing-large) auto 0;
-  padding-top: 48px;
+  margin: 128px auto 0;
+  padding-top: var(--section-y);
   text-align: center;
 }
 .problem-driving::before {
@@ -1084,7 +1084,7 @@
   position: absolute;
   z-index: -1;
   top: 0;
-  bottom: -72px;
+  bottom: calc(var(--section-y) * -1);
   left: 50%;
   width: 100vw;
   transform: translateX(-50%);
@@ -1114,4 +1114,118 @@
     font-size: 16px;
     line-height: 26px;
   }
+}
+
+/* Hero fills the visible screen under the sticky navbar at every size (min-height, so taller content
+   such as a phone in landscape simply grows). Content is one centered group: equal padding top and
+   bottom, vertical centering from the flex column, consistent gaps, and the buttons no longer sit on
+   the bottom edge. --nav-h is the navbar's rendered height (91px, 61px on phones). */
+:root {
+  --nav-h: 91px;
+}
+@media screen and (max-width: 479px) {
+  :root {
+    --nav-h: 61px;
+  }
+}
+.hero-wrapper {
+  min-height: calc(100vh - var(--nav-h));
+  min-height: calc(100svh - var(--nav-h));
+  padding: clamp(40px, 8svh, 96px) 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.hero-content > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.hero-eyebrow {
+  margin-bottom: var(--spacing-medium);
+}
+.hero-subtitle {
+  margin-top: var(--spacing-medium);
+}
+.hero-pos-note {
+  margin-top: var(--spacing-small);
+  margin-bottom: 0;
+}
+.hero-button-wrapper {
+  margin-top: var(--spacing-large);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media screen and (max-width: 479px) {
+  .hero-button-wrapper {
+    width: 100%;
+    flex-direction: column;
+    gap: var(--spacing-small);
+  }
+  .hero-button-wrapper > a {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
+}
+
+/* ---- Page rhythm: one vertical padding for every full-width section ------------------------------
+   --section-y is the top and bottom padding of every section (120px desktop, 88px tablet, 64px phone),
+   so spacing and inner padding are the same everywhere. Related blocks that read as one unit keep
+   their own tighter joins (Challenge heading -> problem cards, feature rows -> sample frame). */
+:root {
+  --section-y: 120px;
+}
+@media screen and (max-width: 991px) {
+  :root {
+    --section-y: 88px;
+  }
+}
+@media screen and (max-width: 479px) {
+  :root {
+    --section-y: 64px;
+  }
+}
+#Challenge-Section.spark-section-7.spark-overflow-hidden-2 {
+  padding-top: var(--section-y);
+  padding-bottom: var(--spacing-large);
+}
+.problem-examples {
+  padding-top: 0;
+  padding-bottom: var(--section-y);
+}
+.featured-wrapper,
+.integration-wrapper,
+.customer-engagement-wrapper,
+.call-to-action-wrapper,
+.pricing-wrapper,
+.legal-body {
+  padding-top: var(--section-y);
+  padding-bottom: var(--section-y);
+}
+.sample-frame {
+  padding-top: 0;
+  padding-bottom: var(--section-y);
+}
+.info-section {
+  padding-top: var(--section-y);
+  padding-bottom: var(--section-y);
+}
+/* Short sections get a minimum height so they read as a full, visible band, content centered. */
+#Coverage-Section {
+  min-height: clamp(460px, 62svh, 620px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#Coverage-Section > .info-container {
+  width: 100%;
+}
+.call-to-action-wrapper {
+  min-height: clamp(500px, 72svh, 760px);
 }
