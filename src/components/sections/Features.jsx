@@ -45,7 +45,7 @@ const cards = [
     leftContainerClass: 'w-layout-blockcontainer featured-card-left-container card2 w-container',
     imageTarget:
       '[[["6aa935b3aacd1b5b9fc5d716","9200e114-d3c5-1be7-ace2-84bbd4570683"],[]]]',
-    imageSrc: '/images/Better%20_Data_Better%20_Insight..svg',
+    imageSrc: '/images/Better_Data_Better%20_Insight.svg',
     // Same radius as card 1, vertical % scaled by this image's 1479×1064 aspect.
     imageStyle: { borderRadius: '10.83% / 15.06%' },
   },
