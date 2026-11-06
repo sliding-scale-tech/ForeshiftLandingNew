@@ -19,9 +19,10 @@ const cards = [
     leftContainerClass: 'w-layout-blockcontainer featured-card-left-container w-container',
     imageTarget:
       '[[["6aa935b3aacd1b5b9fc5d716","15d5c981-b5d1-e73b-8615-1d009566d220"],[]]]',
-    imageSrc: '/images/ChatGPT-Image-Sep-15-2026-06_17_44-PM.avif',
-    imageSrcSet:
-      '/images/cd70bfa49f0b1a6648994eb547a79f0e_ChatGPT-Image-Sep-15-2026-06_17_44-PM-p-500.avif 500w, /images/cd70bfa49f0b1a6648994eb547a79f0e_ChatGPT-Image-Sep-15-2026-06_17_44-PM-p-800.avif 800w, /images/cd70bfa49f0b1a6648994eb547a79f0e_ChatGPT-Image-Sep-15-2026-06_17_44-PM-p-1080.avif 1080w, /images/ChatGPT-Image-Sep-15-2026-06_17_44-PM.avif 1254w',
+    imageSrc: '/images/Better%20_Staffing%20_Decisions.svg',
+    // Match the corner radius baked into the "Better Data" SVG (rx 130 / 1200 wide ≈ 10.83% of width);
+    // vertical % scaled by this image's 1536×1024 aspect so the corners stay circular.
+    imageStyle: { borderRadius: '10.83% / 16.25%' },
   },
   {
     wrapperTarget:
@@ -44,9 +45,7 @@ const cards = [
     leftContainerClass: 'w-layout-blockcontainer featured-card-left-container card2 w-container',
     imageTarget:
       '[[["6aa935b3aacd1b5b9fc5d716","9200e114-d3c5-1be7-ace2-84bbd4570683"],[]]]',
-    imageSrc: '/images/built-around-concept.avif',
-    imageSrcSet:
-      '/images/built-around-concept-p-500.avif 500w, /images/built-around-concept.avif 600w',
+    imageSrc: '/images/Better_Data_Better_Insight..svg',
   },
   {
     wrapperTarget:
@@ -68,9 +67,9 @@ const cards = [
     leftContainerClass: 'w-layout-blockcontainer featured-card-left-container card3 w-container',
     imageTarget:
       '[[["6aa935b3aacd1b5b9fc5d716","7eeae2a1-3bf1-0a4c-5351-39be08d006cf"],[]]]',
-    imageSrc: '/images/run-every-shift.avif',
-    imageSrcSet:
-      '/images/run-every-shift-p-500.avif 500w, /images/run-every-shift.avif 600w',
+    imageSrc: '/images/Turn%20_Local%20_Demand%20_into%20_Opportunity.svg',
+    // Same radius as above, vertical % scaled by this image's 1479×1064 aspect.
+    imageStyle: { borderRadius: '10.83% / 15.06%' },
   },
 ]
 
@@ -81,10 +80,9 @@ function ImageBlock({ card }) {
         src={card.imageSrc}
         loading="lazy"
         data-wf-target={card.imageTarget}
-        sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 940px"
         alt={card.imageAlt}
-        srcSet={card.imageSrcSet}
         className="featured-card-image"
+        style={card.imageStyle}
       />
       <p className="illustration-caption">Illustrative example.</p>
     </div>
