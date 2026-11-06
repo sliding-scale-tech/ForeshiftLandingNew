@@ -45,7 +45,9 @@ const cards = [
     leftContainerClass: 'w-layout-blockcontainer featured-card-left-container card2 w-container',
     imageTarget:
       '[[["6aa935b3aacd1b5b9fc5d716","9200e114-d3c5-1be7-ace2-84bbd4570683"],[]]]',
-    imageSrc: '/images/Better_Data_Better_Insight..svg',
+    imageSrc: '/images/Better%20_Data_Better%20_Insight..svg',
+    // Same radius as card 1, vertical % scaled by this image's 1479×1064 aspect.
+    imageStyle: { borderRadius: '10.83% / 15.06%' },
   },
   {
     wrapperTarget:
@@ -68,8 +70,8 @@ const cards = [
     imageTarget:
       '[[["6aa935b3aacd1b5b9fc5d716","7eeae2a1-3bf1-0a4c-5351-39be08d006cf"],[]]]',
     imageSrc: '/images/Turn%20_Local%20_Demand%20_into%20_Opportunity.svg',
-    // Same radius as above, vertical % scaled by this image's 1479×1064 aspect.
-    imageStyle: { borderRadius: '10.83% / 15.06%' },
+    // Same radius as card 1, vertical % scaled by this image's 1600×1062 aspect.
+    imageStyle: { borderRadius: '10.83% / 16.32%' },
   },
 ]
 
