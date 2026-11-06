@@ -104,7 +104,7 @@ Desktop-first. `≥1920`, `≥1440`, `≥1280` scale type up; `≤991` (tablet: 
 - **Containers:** `.w-layout-blockcontainer` max 940px centered; `.info-container` 1100px (`--wide` 1200px, `--narrow` 800px, `--center` text-align center); pricing grid max 1200px; legal body max 900px; sample outlook max 960px; hero content max 1440px.
 - **Grids:** problem examples 3 columns (1 at ≤991), pricing 3 columns (1 at ≤991, max 500px), steps 3 columns, `.info-grid--two` 2 columns, `.info-grid--one` single 480px column, sample outlook `3fr 2fr` (1 column at ≤991). Grid gap `--spacing-medium` (24px) unless noted.
 - **Banding:** sections alternate white and `--color-background-section` (`.info-section` / `.info-section--alt`) to separate content without heavy dividers.
-- **Anchors:** `#Sample-Outlook, #Product-Section, #How-it-Works-Section, #Coverage-Section, #Pricing-Section, #FAQ-Section, #Features-Section` use `scroll-margin-top: 100px` to clear the sticky navbar. Section id `Challenge-Section` (singular) is correct; the old `#Challenges-Section` link was a bug.
+- **Anchors:** `#How-it-Works-Section, #Coverage-Section, #Pricing-Section, #FAQ-Section, #Features-Section` use `scroll-margin-top: var(--nav-h)` to clear the sticky navbar. `#Features-Section` (Product link) also skips its top padding, landing the first card 32px below the navbar. Section id `Challenge-Section` (singular) is correct; the old `#Challenges-Section` link was a bug.
 
 ## 5. Components
 
@@ -127,7 +127,7 @@ Desktop-first. `≥1920`, `≥1440`, `≥1280` scale type up; `≤991` (tablet: 
 Rules: the single signup label is `CTA_LABEL = 'Get started'` (in `config/site.js`). External links open in a new tab with `rel="noopener"`. Hero button gap 24px, 60px above. Transforms are disabled under reduced motion.
 
 ### 5.3 Hero
-Order: eyebrow pill → h1 → subtitle → "No POS connection required." → button pair → screenshot → caption.
+Order: eyebrow pill → h1 → subtitle → "Weather, sports, concerts and nearby conferences-all one place." → "No POS connection required." → button pair → screenshot → caption.
 - Eyebrow `.hero-eyebrow`: inline-block pill, `--color-background-light` fill, 1px `#cfe0ff` border, 12px radius, 12px 22px padding, accent-blue text.
 - Image: close-up Daily Outlook screenshot (`hero-outlook-screenshot.webp`, 1586x992, responsive `srcSet` 500/800/1080/1586), width 85% (100% at ≤991), `loading="eager"` + `fetchPriority="high"` (LCP). Alt text describes demand by daypart, chart and drivers. Caption: "Sample outlook: illustrative data." (12px above, 40px below).
 - Background: `#f2faff` with `hero-illustration-2.avif`.
@@ -135,28 +135,23 @@ Order: eyebrow pill → h1 → subtitle → "No POS connection required." → bu
 ### 5.4 Challenge (problem) section
 - Background `#f8fafb`, 100px vertical padding (bottom 40px on desktop), decorative circle clusters left and right (`.spark-hold-circles-2`, static in the final state).
 - Heading "Plan for the busy shifts." / "Prepare for the quiet ones." (two lines, `busy` and `quiet` accented) and description.
-- **Three static example cards** (`ProblemExamples`): unexpected event activity, excess prep, quieter service. Each: 60px icon, h3 (22px), one sentence. Card: white, 2px `#1a73e8` border, 12px radius, 40px 24px padding. No slider, no arrows.
+- **Three static example cards** (`ProblemExamples`): Unexpected Event Activity, Weather impact, Integrated AI (icons `weather-impact.svg` and `integrated-ai.svg` for the last two). Each: 60px icon, h3 (22px), one sentence. Card: white, 2px `#1a73e8` border, 12px radius, 40px 24px padding. No slider, no arrows.
 
 ### 5.5 Feature blocks (`Features`)
-Three alternating text/image rows in `.featured-card-wrapper`: "See what is shaping local demand." → "Built around your concept and location." → "Run every Shift with fewer surprises." Left/right text container with `.featured-card-title` and `.featured-card-text`; image in `.featured-card-right-container` with `.illustration-caption` "Illustrative example.". Images are AVIF with 500/800/1080 variants, lazy loaded.
+Three alternating text/image rows in `.featured-card-wrapper`: "Better Staffing Decisions" → "Better Data. Better Insight." → "Turn Local Demand into Opportunity." Left/right text container with `.featured-card-title` and `.featured-card-text`; image in `.featured-card-right-container` with `.illustration-caption` "Illustrative example.". Images are AVIF with 500/800/1080 variants, lazy loaded.
 
 ### 5.6 Integrations / sample outlook
-- Heading "Demand insights for the decisions ahead." + body, then **`SampleOutlook`**: a real-text card replacing the old moving ribbons.
-  - Container: white, 1px border, 16px radius, 24px padding, soft blue shadow, max 960px.
-  - Label (`.sample-outlook-label`, sentence case): "Sample outlook: illustrative data".
-  - Left: seven day bars (Mon-Sun) in `--color-primary`, five relative levels (20/40/60/80/100% height with graduated opacity .35 → 1), 180px tall, 12px gap (6px at ≤479), day names 14px. Right: driver list rows (`--color-background-section` fill, 12px radius) with bold driver name and gray detail.
-  - Levels are relative, unlabeled by the retired category names, and show no numbers.
-- Then the "Get started" button.
+- Heading "Foreshift. Demand insights for the decisions ahead." + body, then the interactive sample outlook (5.6b), then the "Get started" button.
 
 ### 5.6b Interactive sample outlook (iframe)
-Between the feature rows and "Demand insights for the decisions ahead." (`SampleOutlookFrame`). A browser-style window (16px radius, 1px border, soft blue shadow, max 1320px) with a decorative top bar (three dots and the URL `app.foreshift.ai/sample-outlook`) around an iframe of the live app sample (`EXTERNAL.sampleOutlook`). Iframe height 760px desktop, 760px tablet, 680px phone, lazy loaded, sandboxed (`allow-scripts allow-same-origin allow-forms allow-popups`). Caption: "Sample outlook: illustrative data." plus an "open it in a new tab" link. The app page opens with a "Sample" banner containing a Sign in button; the iframe is pulled up inside a clipping `.sample-frame-viewport` (crop 109/153/209/229/249px by frame width, measured against the live page) so the banner is out of view. Re-measure the crops if the app's header changes. All screens: the iframe starts behind a transparent "Click to explore the sample" ("Tap" on touch) gate so touch swipes and the mouse wheel scroll the page instead of being trapped by the frame; once activated the bar shows a "Done" button that restores the gate. Visible frame height is `min(760px, 80svh)` (75svh tablet, 72svh phone). Depends on the app page staying framable (no `X-Frame-Options` / `frame-ancestors` block). Replaces the earlier static screenshot.
+Inside the Integrations section, under its body text (`SampleOutlookFrame`). A browser-style window (16px radius, 1px border, soft blue shadow, max 1320px) with a decorative top bar (three dots and the URL `app.foreshift.ai/sample-outlook`) around an iframe of the live app sample (`EXTERNAL.sampleOutlook`). Iframe height 760px desktop, 760px tablet, 680px phone, lazy loaded, sandboxed (`allow-scripts allow-same-origin allow-forms allow-popups`). Caption: "Sample outlook: illustrative data." plus an "open it in a new tab" link. The app page opens with a "Sample" banner containing a Sign in button; the iframe is pulled up inside a clipping `.sample-frame-viewport` (crop 109/153/209/229/249px by frame width, measured against the live page) so the banner is out of view. Re-measure the crops if the app's header changes. All screens: the iframe starts behind a transparent "Click to explore the sample" ("Tap" on touch) gate so touch swipes and the mouse wheel scroll the page instead of being trapped by the frame; once activated the bar shows a "Done" button that restores the gate. Visible frame height is `min(760px, 80svh)` (75svh tablet, 72svh phone). Depends on the app page staying framable (no `X-Frame-Options` / `frame-ancestors` block). Replaces the earlier static screenshot.
 
 ### 5.7 Product overview (`ProductOverview`)
-Heading with accent words, then cards: See what's Coming · Understand Why · Plan with better context · Compare it with Reality ("Record how busy service felt and note unusual conditions."). Each has an illustration and "Illustrative example." caption. The AI card reads "AI explains the demand outlook in plain language, helping you understand what may drive a busy or quiet period for your restaurant."
+Removed from the home page. `Integrations` is followed directly by `Steps`. The component file remains unused.
 
 ### 5.8 Steps (home) and detail steps (page)
-- Home: `.steps-grid` 3 columns of `.info-card.step-card`; `.step-number` is a 44px circle, `--shift-light-accessible` fill, white 20px/700 numeral, `aria-hidden`. Titles: **Add your location and concept** · **Set your operating hours** · **Explore your demand outlook**.
-- Page (`/how-it-works`): `.detail-steps` vertical list, number badge left, "what you provide" lines per step.
+- Home: `.steps-grid` 3 columns of `.info-card.step-card`; `.step-number` is a 44px circle, `--shift-light-accessible` fill, white 20px/700 numeral, `aria-hidden`. Heading "Get started in 3 easy steps". Titles: **Add your location** · **Choose your Concept Type** · **Set your operating hours**. Closing line `.steps-closing`: "Explore your personalized demand outlook".
+- Page (`/how-it-works`): `.detail-steps` vertical list, number badge left, "what you provide" lines per step, then an unnumbered `.detail-outcome` card, "Explore your personalized demand outlook".
 - Links beneath: "See the full walkthrough", "Insights without a POS connection" (`.info-link`).
 
 ### 5.9 Coverage
@@ -240,10 +235,10 @@ Home section order: Hero → Challenge → Problem examples → Features → Int
 ## 12. Known gaps and open decisions
 
 1. **Em dash vs. doc wording.** The doc contains em dashes in the hero description and in "Sample outlook — illustrative data." The project rule is no em dashes, so commas and a colon are used. Restore the doc's punctuation only if the client overrides the rule.
-2. **Mixed-case accent words** not covered by the doc remain ("Run every Shift…", "Compare it with Reality", "See what's Coming", "Understand Why", "One Forecast. The Context behind it. The Next Move."). Lowercase them if exact sentence case is required everywhere.
+2. **Doc wording kept exactly:** "Foreshift" (Better Data card, Demand insights heading) and "conferences-all one place" (hero) follow the client doc character for character. Confirm before changing them.
 3. **Demand category names** are not shown in code; confirm the app's approved names, then update copy, screenshots and illustrations together.
 4. **"Estimated covers per daypart"** appears as a Dynamic Scheduling feature while the policy pages say the forecast does not predict a venue's own covers. Reconcile the wording.
-5. **Sample outlook URL** (`https://app.foreshift.ai/sample-outlook`) must exist, or point the secondary button to the on-page `#Sample-Outlook`.
+5. **Sample outlook URL** (`https://app.foreshift.ai/sample-outlook`) must exist, or the secondary button and the embedded frame break.
 6. **No phone number is published** (removed by decision); contact is email and the form only.
 7. **Webmaster tools and conversion tracking** not yet set up.
 8. **Retired-category imagery** needs re-export by the asset owner.

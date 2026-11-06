@@ -3,18 +3,18 @@
 const EXAMPLES = [
   {
     icon: '/images/calendar-error_17628454.png',
-    heading: 'Unexpected event activity',
-    text: 'A nearby event can turn a normal night into a busy one before you see it coming.',
+    heading: 'Unexpected Event Activity',
+    text: 'A nearby sporting event, conference or concert can turn a normal night into a busy one before you see it coming.',
   },
   {
-    icon: '/images/fermented_13195522.png',
-    heading: 'Excess prep',
-    text: 'Prep built for a busier night can leave food, time and margin going to waste.',
+    icon: '/images/weather-impact.svg',
+    heading: 'Weather impact',
+    text: 'See the forecast and how a sunny day or rainy night may influence demand in your area.',
   },
   {
-    icon: '/images/work-time_18741883.png',
-    heading: 'Quieter service',
-    text: 'A slower shift is easier to plan for when you know it may be coming.',
+    icon: '/images/integrated-ai.svg',
+    heading: 'Integrated AI',
+    text: 'Ask ForeShift AI Pass questions to understand demand for your restaurant’s concept, location, and time of day.',
   },
 ]
 
@@ -35,9 +35,9 @@ export default function ProblemExamples() {
         <div className="problem-driving">
           <h3 className="problem-driving-title">Understand What&rsquo;s Driving Demand</h3>
           <p className="problem-driving-text">
-            ForeShift&rsquo;s integrated AI connects your restaurant profile with insights from our patent-pending demand
-            technology. It uses your concept, location, nearby events and weather forecast to explain your demand outlook
-            and answer demand questions, helping you make more informed decisions, all within your dashboard.
+            Your personalized dashboard brings weather, nearby events, and insights from ForeShift&rsquo;s patent-pending
+            demand technology into one place. Explore an outlook tailored to your restaurant&rsquo;s concept and location,
+            and ask AI Pass questions to help plan the shift ahead.
           </p>
         </div>
       </div>

@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { EXTERNAL } from '../../config/site'
 
-// Interactive sample outlook, embedded from the product app (staged data), between the feature
-// rows and "Demand insights for the decisions ahead." Replaces the static screenshot. The browser
+// Interactive sample outlook, embedded from the product app (staged data), inside the "Demand
+// insights for the decisions ahead." section. Replaces the static screenshot. The browser
 // chrome is decorative; the real controls live inside the iframe. The app page opens with a
 // "Sample" banner holding a Sign in button; the iframe is shifted up inside a clipping viewport so
 // that banner sits outside the visible area (see .sample-frame-viewport in globals.css).

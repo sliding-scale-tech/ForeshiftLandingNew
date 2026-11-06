@@ -18,14 +18,14 @@ export const ROUTES = {
 // FAQ · Sign in · Get started (Contact us lives in the footer). `to` is a route, optionally with a #section — every link lands on a
 // real destination.
 export const NAV_LINKS = [
-  { label: 'Product', to: `${ROUTES.home}#Product-Section` },
+  { label: 'Product', to: `${ROUTES.home}#Features-Section` },
   { label: 'How it works', to: ROUTES.howItWorks },
   { label: 'Coverage', to: ROUTES.coverage },
   { label: 'FAQ', to: `${ROUTES.home}#FAQ-Section` },
 ]
 
 export const FOOTER_LINKS = [
-  { label: 'Product', to: `${ROUTES.home}#Product-Section` },
+  { label: 'Product', to: `${ROUTES.home}#Features-Section` },
   { label: 'How it works', to: ROUTES.howItWorks },
   { label: 'Demand insights without a POS', to: ROUTES.noPos },
   { label: 'Coverage', to: ROUTES.coverage },
@@ -100,7 +100,7 @@ export const PAGE_META = {
   [ROUTES.howItWorks]: {
     title: 'How ForeShift Works | ForeShift',
     description:
-      'Add your location and concept, set your operating hours, and explore a demand outlook shaped by weather and nearby events. No POS connection required.',
+      'Add your location, choose your concept type, set your operating hours, and explore a demand outlook shaped by weather and nearby events. No POS connection required.',
   },
   [ROUTES.noPos]: {
     title: 'Demand Insights Without a POS Connection | ForeShift',

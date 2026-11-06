@@ -5,22 +5,21 @@ import { ROUTES } from '../config/site'
 
 const DETAIL_STEPS = [
   {
-    title: 'Add your location and concept',
-    provide: 'Your restaurant’s address and its concept type.',
+    title: 'Add your location',
+    provide: 'Your Detroit restaurant’s address.',
+    happens: 'ForeShift places your address in the right part of the city, a defined trade area, or zone.',
+  },
+  {
+    title: 'Choose your Concept Type',
+    provide: 'Your restaurant category.',
     happens:
-      'ForeShift places your address in the right part of the city, a defined trade area, or zone, and uses your concept type to pick the demand pattern that fits you. A fast-casual counter and a fine-dining room are not treated the same, even on the same street.',
+      'ForeShift uses your concept type to pick the demand pattern that fits you. A fast-casual counter and a fine-dining room are not treated the same, even on the same street.',
   },
   {
     title: 'Set your operating hours',
     provide: 'The days and hours you are open.',
     happens:
       'Your hours shape which service periods appear, so the outlook is organized around the shifts you actually run instead of a generic day.',
-  },
-  {
-    title: 'Explore your demand outlook',
-    provide: 'Nothing more: the outlook is ready.',
-    happens:
-      'Open the week ahead, compare service periods, and see the weather and nearby events behind each one. An optional AI Pass lets you ask the forecast a question in plain language.',
   },
 ]
 
@@ -71,6 +70,13 @@ export default function HowItWorksPage() {
               </li>
             ))}
           </ol>
+          <div className="info-card detail-outcome">
+            <h2 className="info-card-title">Explore your personalized demand outlook</h2>
+            <p className="info-card-text">
+              Open the week ahead, compare service periods, and see the weather and nearby events behind each one. An
+              optional AI Pass lets you ask the forecast a question in plain language.
+            </p>
+          </div>
         </div>
       </section>
 

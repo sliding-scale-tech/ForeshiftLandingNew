@@ -7,12 +7,12 @@ const cards = [
       '[[["6aa935b3aacd1b5b9fc5d716","98746839-578f-50ee-2363-b3447e793966"],[]]]',
     title: (
       <>
-        See what is shaping <span className="text-span-27">local demand.</span>
+        Better Staffing <span className="text-span-27">Decisions</span>
       </>
     ),
     textTarget:
       '[[["6aa935b3aacd1b5b9fc5d716","a17466c3-9942-6550-f519-0664ade9edae"],[]]]',
-    text: 'Explore how nearby events and forecast weather may influence demand for your concept and location.',
+    text: 'Use your demand outlook to plan staffing with greater confidence, helping reduce the risk of overstaffing or being caught short during a busy shift.',
     imageAlt: 'Illustration: weather, events and holidays feeding into tomorrow’s demand outlook',
     btnContainerTarget:
       '[[["6aa935b3aacd1b5b9fc5d716","ee9102ab-06fd-3043-825d-daea219f42dd"],[]]]',
@@ -32,12 +32,12 @@ const cards = [
       '[[["6aa935b3aacd1b5b9fc5d716","9200e114-d3c5-1be7-ace2-84bbd457067c"],[]]]',
     title: (
       <>
-        Built around your <span className="text-span-28">concept and location.</span>
+        Better Data. <span className="text-span-28">Better Insight.</span>
       </>
     ),
     textTarget:
       '[[["6aa935b3aacd1b5b9fc5d716","9200e114-d3c5-1be7-ace2-84bbd457067e"],[]]]',
-    text: 'The outlook reflects your restaurant’s concept and the area around it, so a coffee shop, a sports bar and a fine-dining venue aren’t treated the same, even within the same city.',
+    text: 'Compare your demand outlook with actual activity at your restaurant. Foreshift tracks patterns over time to better understand how local demand translates into business at your location.',
     imageAlt: 'Illustration: a weekly demand outlook built from weather, events and local context',
     btnContainerTarget:
       '[[["6aa935b3aacd1b5b9fc5d716","543884fb-9ccf-8ad8-cfbe-7c30e3ef6ca4"],[]]]',
@@ -57,12 +57,12 @@ const cards = [
       '[[["6aa935b3aacd1b5b9fc5d716","7eeae2a1-3bf1-0a4c-5351-39be08d006c8"],[]]]',
     title: (
       <>
-        Run every <span className="text-span-18">Shift</span> with fewer surprises.
+        Turn Local Demand into <span className="text-span-18">Opportunity.</span>
       </>
     ),
     textTarget:
       '[[["6aa935b3aacd1b5b9fc5d716","7eeae2a1-3bf1-0a4c-5351-39be08d006ca"],[]]]',
-    text: 'ForeShift gives operators a clearer view of the week ahead, helping teams make better decisions around staffing, prep, hours, promotions, and event readiness before the shift arrives.',
+    text: 'See when nearby events and local activity may create opportunities for your concept. Use those insights to plan promotions, adjust hours, and attract more of the customers around you.',
     imageAlt: 'Illustration: a next-shift demand outlook next to the previous day',
     btnContainerTarget: null,
     leftContainerClass: 'w-layout-blockcontainer featured-card-left-container card3 w-container',

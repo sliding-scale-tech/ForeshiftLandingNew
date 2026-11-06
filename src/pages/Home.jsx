@@ -2,9 +2,7 @@ import Hero from '../components/sections/Hero'
 import Challenge from '../components/sections/Challenge'
 import ProblemExamples from '../components/sections/ProblemExamples'
 import Features from '../components/sections/Features'
-import SampleOutlookFrame from '../components/sections/SampleOutlookFrame'
 import Integrations from '../components/sections/Integrations'
-import ProductOverview from '../components/sections/ProductOverview'
 import Steps from '../components/sections/Steps'
 import CoverageTeaser from '../components/sections/CoverageTeaser'
 import Pricing from '../components/sections/Pricing'
@@ -18,9 +16,7 @@ export default function Home() {
       <Challenge />
       <ProblemExamples />
       <Features />
-      <SampleOutlookFrame />
       <Integrations />
-      <ProductOverview />
       <Steps />
       <CoverageTeaser />
       <Pricing />

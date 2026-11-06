@@ -47,10 +47,10 @@ export default function Pricing() {
     <section id="Pricing-Section" className="pricing-wrapper">
       <div className="pricing-header">
         <h2 className="chatbot-heading">
-          Simple <span className="text-span-19">pricing</span>, built to grow with you.
+          Choose the <span className="text-span-19">plan</span> that fits your restaurant.
         </h2>
         <p className="spark-hero-sub-paragraph-2">
-          Three plans, billed monthly in US dollars. Each includes everything in the plan below it.
+          Start with local events, weather, and demand insights, or upgrade for scheduling insight and sales forecasting. Plans start at $99/month. Each upgrade includes all the features of the previous plan.
         </p>
       </div>
       <TierCards compact />

@@ -63,16 +63,16 @@ export const COVERAGE = {
 
 export const STEPS = [
   {
-    title: 'Add your location and concept',
-    text: 'Enter your Detroit restaurant’s address and choose your concept type, so ForeShift can place you in the right part of the city.',
+    title: 'Add your location',
+    text: 'Enter your Detroit restaurant’s address.',
+  },
+  {
+    title: 'Choose your Concept Type',
+    text: 'Choose your restaurant category.',
   },
   {
     title: 'Set your operating hours',
-    text: 'Tell us when you’re open, so the outlook is organized around the service periods you actually run.',
-  },
-  {
-    title: 'Explore your demand outlook',
-    text: 'See expected demand by day and service period, and the weather and nearby events behind it.',
+    text: 'Tell us when you’re open.',
   },
 ]
 

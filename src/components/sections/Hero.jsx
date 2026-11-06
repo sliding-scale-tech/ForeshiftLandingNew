@@ -13,6 +13,7 @@ export default function Hero() {
           and how nearby events and weather may shift it, so you can plan around what&rsquo;s coming, not
           react to it.
         </p>
+        <p className="hero-subtitle hero-signals">Weather, sports, concerts and nearby conferences-all one place.</p>
         <p className="hero-pos-note">No POS connection required.</p>
       </div>
       <div className="hero-button-wrapper">

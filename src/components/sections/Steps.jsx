@@ -8,7 +8,7 @@ export default function Steps() {
     <section id="How-it-Works-Section" className="info-section info-section--alt">
       <div className="info-container info-container--center">
         <h2 className="info-heading">
-          From address to outlook in <span className="text-span-19">three steps.</span>
+          Get started in <span className="text-span-19">3 easy steps</span>
         </h2>
         <p className="info-lead">No POS connection, no integration work, just your restaurant&rsquo;s details.</p>
         <ol className="steps-grid">
@@ -20,6 +20,7 @@ export default function Steps() {
             </li>
           ))}
         </ol>
+        <p className="steps-closing">Explore your personalized demand outlook</p>
         <p className="info-links-row">
           <Link to={ROUTES.howItWorks} className="info-link">See the full walkthrough</Link>
           <Link to={ROUTES.noPos} className="info-link">Insights without a POS connection</Link>
