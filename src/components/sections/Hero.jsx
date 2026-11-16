@@ -9,11 +9,13 @@ export default function Hero() {
           Know <span className="text-span-2">demand</span> before you <span className="text-span">open.</span>
         </h1>
         <p className="hero-subtitle">
-          Know what to expect before you open. ForeShift forecasts expected demand for your concept and location,
-          and how nearby events and weather may shift it, so you can plan around what&rsquo;s coming, not
-          react to it.
+          Know what to expect before you open. ForeShift forecasts demand for your restaurant based on your concept,
+          location, local events, and weather, so you can plan around what&rsquo;s coming not react to it.
         </p>
-        <p className="hero-subtitle hero-signals">Weather, sports, concerts and nearby conferences-all one place.</p>
+        <p className="hero-subtitle hero-signals">
+          Track local sports, concerts, conferences, and weather in one place and understand how they may shift
+          demand for your restaurant.
+        </p>
         <p className="hero-pos-note">No POS connection required.</p>
       </div>
       <div className="hero-button-wrapper">

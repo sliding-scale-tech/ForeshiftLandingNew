@@ -6,7 +6,7 @@ import { ROUTES } from '../config/site'
 const DETAIL_STEPS = [
   {
     title: 'Add your location',
-    provide: 'Your Detroit restaurant’s address.',
+    provide: 'Your restaurant’s address.',
     happens: 'ForeShift places your address in the right part of the city, a defined trade area, or zone.',
   },
   {

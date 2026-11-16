@@ -64,7 +64,7 @@ export const COVERAGE = {
 export const STEPS = [
   {
     title: 'Add your location',
-    text: 'Enter your Detroit restaurant’s address.',
+    text: 'Enter your restaurant’s address.',
   },
   {
     title: 'Choose your Concept Type',
