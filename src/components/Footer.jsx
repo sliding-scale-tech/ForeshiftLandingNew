@@ -49,15 +49,7 @@ export default function Footer() {
                 {c.label}
               </a>
             ))}
-            <address className="foot-address">
-              {ADDRESS.name}
-              <br />
-              {ADDRESS.street}
-              <br />
-              {ADDRESS.city}, {ADDRESS.region} {ADDRESS.postalCode}
-              <br />
-              {ADDRESS.country}
-            </address>
+            <p className="foot-address">{ADDRESS.name}</p>
           </div>
         </div>
       </div>
