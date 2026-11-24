@@ -5,15 +5,27 @@ import { ADDRESS, CONTACT_LINKS, FOOTER_LINKS, LEGAL_LINKS, LOGO, ROUTES } from 
 export default function Footer() {
   return (
     <section className="footer">
+      <img
+        className="section-bg"
+        src="/images/footer-background.avif"
+        alt=""
+        width={2880}
+        height={1012}
+        loading="lazy"
+        decoding="async"
+      />
       <div className="footer-wrapper">
         <div className="footer-columns">
           <Link to={ROUTES.home} aria-label="ForeShift home" className="w-inline-block">
             <img
-              sizes="(max-width: 1343px) 100vw, 1343px"
+              src={LOGO.src}
               srcSet={LOGO.srcSet}
+              sizes={LOGO.sizes}
+              width={LOGO.width}
+              height={LOGO.height}
               alt=""
               loading="lazy"
-              src={LOGO.src}
+              decoding="async"
               className="foot-logo"
             />
           </Link>

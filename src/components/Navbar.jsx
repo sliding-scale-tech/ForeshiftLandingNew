@@ -26,11 +26,14 @@ export default function Navbar() {
         <div className="navbar-container">
           <Link to={ROUTES.home} aria-label="ForeShift home" className="brand w-nav-brand">
             <img
-              sizes="(max-width: 479px) 98vw, (max-width: 1343px) 100vw, 1343px"
-              srcSet={LOGO.srcSet}
-              alt=""
               src={LOGO.src}
-              loading="lazy"
+              srcSet={LOGO.srcSet}
+              sizes={LOGO.sizes}
+              width={LOGO.width}
+              height={LOGO.height}
+              alt=""
+              decoding="async"
+              fetchPriority="high"
               className="image"
             />
           </Link>

@@ -10,6 +10,15 @@ import { CTA_LABEL, EXTERNAL } from '../../config/site'
 export default function CallToAction() {
   return (
     <section className="call-to-action-wrapper" data-w-id="77fe5cb1-d7b1-9585-f861-a1158ff54eb8">
+      <img
+        className="section-bg"
+        src="/images/cta-background.avif"
+        alt=""
+        width={2880}
+        height={916}
+        loading="lazy"
+        decoding="async"
+      />
       <div className="customer-engagement-content">
         <h2 className="cta-title">
           See the <span className="text-span-26">demand ahead.</span>
