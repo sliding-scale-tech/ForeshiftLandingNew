@@ -184,17 +184,14 @@ body {
 .footer {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  background-image: url('/images/footer-background.avif');
-  background-position: 50%;
-  background-size: cover;
+  position: relative;
+  overflow: hidden;
   flex-flow: column;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 0;
   padding: 60px 40px 20px;
   display: flex;
-  position: static;
-  inset: auto 0% 0%;
 }
 
 .footer-wrapper {
@@ -1084,9 +1081,8 @@ body {
   grid-column-gap: 40px;
   grid-row-gap: 40px;
   background-color: #fff;
-  background-image: url('/images/cta-background.avif');
-  background-position: 50%;
-  background-size: cover;
+  position: relative;
+  overflow: hidden;
   flex-flow: column;
   justify-content: center;
   align-items: center;

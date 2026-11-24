@@ -19,7 +19,10 @@ const cards = [
     leftContainerClass: 'w-layout-blockcontainer featured-card-left-container w-container',
     imageTarget:
       '[[["6aa935b3aacd1b5b9fc5d716","15d5c981-b5d1-e73b-8615-1d009566d220"],[]]]',
-    imageSrc: '/images/Better%20_Staffing%20_Decisions.svg',
+    imageSrc: '/images/better-staffing-decisions.avif',
+    imageSrcSet: '/images/better-staffing-decisions-640.avif 640w, /images/better-staffing-decisions.avif 1280w',
+    width: 1536,
+    height: 1024,
     // Match the corner radius baked into the "Better Data" SVG (rx 130 / 1200 wide ≈ 10.83% of width);
     // vertical % scaled by this image's 1536×1024 aspect so the corners stay circular.
     imageStyle: { borderRadius: '10.83% / 16.25%' },
@@ -45,7 +48,10 @@ const cards = [
     leftContainerClass: 'w-layout-blockcontainer featured-card-left-container card2 w-container',
     imageTarget:
       '[[["6aa935b3aacd1b5b9fc5d716","9200e114-d3c5-1be7-ace2-84bbd4570683"],[]]]',
-    imageSrc: '/images/Better_Data_Better%20_Insight.svg',
+    imageSrc: '/images/better-data-better-insight.avif',
+    imageSrcSet: '/images/better-data-better-insight-640.avif 640w, /images/better-data-better-insight.avif 1280w',
+    width: 1479,
+    height: 1064,
     // Same radius as card 1, vertical % scaled by this image's 1479×1064 aspect.
     imageStyle: { borderRadius: '10.83% / 15.06%' },
   },
@@ -70,6 +76,9 @@ const cards = [
     imageTarget:
       '[[["6aa935b3aacd1b5b9fc5d716","7eeae2a1-3bf1-0a4c-5351-39be08d006cf"],[]]]',
     imageSrc: '/images/Turn%20_Local%20_Demand%20_into%20_Opportunity.svg',
+    imageSrcSet: null,
+    width: 1600,
+    height: 1062,
     // Same radius as card 1, vertical % scaled by this image's 1600×1062 aspect.
     imageStyle: { borderRadius: '10.83% / 16.32%' },
   },
@@ -80,7 +89,12 @@ function ImageBlock({ card }) {
     <div className="w-layout-blockcontainer featured-card-right-container w-container">
       <img
         src={card.imageSrc}
+        srcSet={card.imageSrcSet || undefined}
+        sizes={card.imageSrcSet ? '(max-width: 767px) 100vw, 612px' : undefined}
+        width={card.width}
+        height={card.height}
         loading="lazy"
+        decoding="async"
         data-wf-target={card.imageTarget}
         alt={card.imageAlt}
         className="featured-card-image"

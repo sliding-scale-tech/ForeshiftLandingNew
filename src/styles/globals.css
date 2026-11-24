@@ -1121,6 +1121,30 @@
   min-height: clamp(500px, 72svh, 760px);
 }
 
+/* Footer and closing CTA artwork. Loaded as a lazy <img> so it does not download with the first CSS. */
+.section-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  pointer-events: none;
+}
+.footer > :not(.section-bg),
+.call-to-action-wrapper > :not(.section-bg) {
+  position: relative;
+  z-index: 1;
+}
+
+/* Width and height attributes reserve the aspect ratio. CSS width decides the painted size. */
+img.image,
+img.foot-logo,
+img.featured-card-image {
+  height: auto;
+}
+
 /* Second hero line: tighter to the description than the description is to the title. */
 .hero-subtitle.hero-signals {
   margin-top: var(--spacing-small);

@@ -75,6 +75,10 @@ export const LOGO = {
   src: '/images/Foreshift_logo-dark1.avif',
   srcSet:
     '/images/Foreshift_logo-dark1-p-500.avif 500w, /images/Foreshift_logo-dark1-p-800.avif 800w, /images/Foreshift_logo-dark1.avif 1343w',
+  // Navbar is 170px wide (110px under 479px). Footer is 170px. Both are well under the 500w file.
+  sizes: '(max-width: 479px) 110px, 170px',
+  width: 1343,
+  height: 385,
 }
 
 export const WF_PAGE_ID = '6aa935b3aacd1b5b9fc5d716'
